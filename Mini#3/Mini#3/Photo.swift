@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Photo: Media {
+class Photo: MediaType {
     
 }

@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Video: Media {
+class Video: MediaType {
     
 }

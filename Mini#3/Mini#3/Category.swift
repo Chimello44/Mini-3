@@ -6,8 +6,62 @@
 //  Copyright (c) 2015 Los caras com escritório legal. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class Category : SubCategory{
-    private var subcategory : Array<SubCategory> = []
+class Category : Item{
+
+    internal var subcategory : Array<Item> = []
+
+    init(name: String, imageIcon : String){
+        super.init(name: name, imageIcon: imageIcon, type: ItemType.Category)
+    }
+
+    required init(name: String, type : ItemType){
+        super.init(name: name, type: ItemType.Category)
+        self.imageIcon = "categoryIcon"
+    }
+
+    override func sort(){
+        if subcategory.count > 0{
+            dispatch_async(Int(QOS_CLASS_BACKGROUND.value), { () -> Void in
+                self.subcategory.sort { (a: Item, b: Item) -> Bool in
+                    if (a.name?.caseInsensitiveCompare(b.name!) == NSComparisonResult.OrderedAscending){
+                        return true
+                    }
+                    else{
+                        return false
+                    }
+                }
+            })
+            for item in self.subcategory{
+                item.sort()
+            }
+        }
+    }
+
+    func addItem(item : Item){
+        if self.subcategory.count == 0{
+            self.subcategory.append(item)
+        }
+        else{
+            let i = binarySearch(item, range: (0 ,self.subcategory.count))
+            self.subcategory.insert(item, atIndex: i)
+        }
+    }
+
+    func binarySearch(item : Item,  range : (start:Int, end:Int)) -> Int{
+        if range.start >= range.end{
+            return range.start
+        }
+        else{
+            let i : Int = range.start+((range.end-range.start)/2)
+            
+            if (item.name.caseInsensitiveCompare(self.subcategory[i].name) == NSComparisonResult.OrderedDescending){
+                return binarySearch(item, range:(i+1, range.end))
+            }
+            else{
+                return binarySearch(item, range:(range.start, i))
+            }
+        }
+    }
 }

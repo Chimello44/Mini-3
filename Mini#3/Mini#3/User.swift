@@ -9,5 +9,6 @@
 import Foundation
 
 class User {
-    
+    let rootCategory : Category = Category(name: "Principal",type: ItemType.Category)
+    let favorite : Category = Category(name: "Principal",type: ItemType.Category)
 }

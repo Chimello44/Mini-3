@@ -8,6 +8,6 @@
 
 import Foundation
 
-class VoiceReq: Media {
+class VoiceReq: MediaType {
     
 }
