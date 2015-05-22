@@ -31,6 +31,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         currentCategory = catman.currentCategory
 
         self.title = currentCategory?.name
+
+        self.tableView.setEditing(false, animated: false)
     }
 
     override func viewWillDisappear(animated: Bool) {
@@ -58,7 +60,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let selected = currentCategory?.subcategory[indexPath.row] as! Category
 
         if selected.type == ItemType.Category{
-            catman.selectCategory(indexPath.row)
+            self.catman.selectCategory(indexPath.row)
             let nextView: UIViewController = self.storyboard!.instantiateViewControllerWithIdentifier("categoryViewController") as! UIViewController
             self.navigationController?.pushViewController(nextView, animated: true)
         }
@@ -66,6 +68,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         else if selected.type == ItemType.Gallery{
             performSegueWithIdentifier("gallerySegue", sender: indexPath)
         }
+    }
+
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+
+        self.catman.removeCategoryAtIndex(indexPath.row)
+
+        self.tableView.reloadData()
     }
 
     // MARK:- Data Source delegate

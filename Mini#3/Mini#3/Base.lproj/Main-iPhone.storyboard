@@ -64,6 +64,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="heightClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="-107" y="89" width="292" height="337"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="D4q-TR-jbU"/>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="0H0-a1-W8Q"/>
@@ -74,6 +77,10 @@
                         <constraints>
                             <constraint firstItem="lZO-Hz-t7f" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="Jmg-Ag-8EJ"/>
                             <constraint firstItem="lZO-Hz-t7f" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="K9Z-Ze-90C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lZO-Hz-t7f" secondAttribute="trailing" constant="-16" id="Kxg-1e-bkn"/>
+                            <constraint firstItem="lZO-Hz-t7f" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="Xvo-ak-XGR"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="lZO-Hz-t7f" secondAttribute="bottom" id="oaU-Zp-ifq"/>
+                            <constraint firstItem="lZO-Hz-t7f" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="pcu-2K-k13"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lZO-Hz-t7f" secondAttribute="trailing" constant="-16" id="r4d-Lo-yBY"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="lZO-Hz-t7f" secondAttribute="bottom" id="rP9-NK-4j7"/>
                         </constraints>
@@ -81,8 +88,20 @@
                             <mask key="constraints">
                                 <exclude reference="Jmg-Ag-8EJ"/>
                                 <exclude reference="K9Z-Ze-90C"/>
+                                <exclude reference="Kxg-1e-bkn"/>
+                                <exclude reference="Xvo-ak-XGR"/>
+                                <exclude reference="pcu-2K-k13"/>
                                 <exclude reference="r4d-Lo-yBY"/>
+                                <exclude reference="oaU-Zp-ifq"/>
                                 <exclude reference="rP9-NK-4j7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="Kxg-1e-bkn"/>
+                                <include reference="Xvo-ak-XGR"/>
+                                <include reference="pcu-2K-k13"/>
+                                <include reference="oaU-Zp-ifq"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -109,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="-188.25"/>
+            <point key="canvasLocation" x="1386" y="-189"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rll-IF-oyn">

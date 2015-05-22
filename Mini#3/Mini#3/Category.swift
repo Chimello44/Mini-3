@@ -39,6 +39,10 @@ class Category : Item{
         }
     }
 
+    func removeChildAtIndex(index: Int){
+        subcategory.removeAtIndex(index)
+    }
+
     func addItem(item : Item){
         if self.subcategory.count == 0{
             self.subcategory.append(item)

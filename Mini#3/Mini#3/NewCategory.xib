@@ -84,6 +84,9 @@
                                         <exclude reference="fGi-QV-N57"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="95" y="99" width="400" height="200"/>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="4HE-K9-D57"/>
@@ -106,15 +109,25 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ls7-qq-Dua" secondAttribute="trailing" constant="10" id="ATH-ML-LLr"/>
                             <constraint firstAttribute="centerX" secondItem="ls7-qq-Dua" secondAttribute="centerX" id="Cs3-kp-o0n"/>
+                            <constraint firstAttribute="centerY" secondItem="ls7-qq-Dua" secondAttribute="centerY" constant="124" id="JTC-To-a4v"/>
                             <constraint firstItem="ls7-qq-Dua" firstAttribute="leading" secondItem="kdZ-x1-D0f" secondAttribute="leading" constant="10" id="Rk3-A9-JNR"/>
                             <constraint firstAttribute="centerY" secondItem="ls7-qq-Dua" secondAttribute="centerY" constant="5" id="ehg-NJ-M0C"/>
+                            <constraint firstAttribute="centerX" secondItem="ls7-qq-Dua" secondAttribute="centerX" id="xZN-wL-uM1"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="ATH-ML-LLr"/>
                                 <exclude reference="Cs3-kp-o0n"/>
+                                <exclude reference="JTC-To-a4v"/>
                                 <exclude reference="Rk3-A9-JNR"/>
                                 <exclude reference="ehg-NJ-M0C"/>
+                                <exclude reference="xZN-wL-uM1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="JTC-To-a4v"/>
+                                <include reference="xZN-wL-uM1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">

@@ -9,6 +9,7 @@
 import Foundation
 
 
+
 class CategoryManager{
     static let sharedInstance = CategoryManager()
 
@@ -34,6 +35,14 @@ class CategoryManager{
 
     func addFavorite(item : Item){
         self.currentUser?.favorite.addItem(item)
+    }
+
+    func removeCategoryAtIndex(index: Int){
+        self.currentCategory?.removeChildAtIndex(index)
+    }
+
+    func removeFavoriteAtIndex(index: Int){
+        self.currentUser?.favorite.removeChildAtIndex(index)
     }
 
     func selectCategory(index: Int){
