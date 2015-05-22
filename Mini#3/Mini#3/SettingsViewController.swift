@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  SettingsViewController.swift
 //  Mini#3
 //
 //  Created by Vitor Kawai Sala on 14/05/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,11 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func logoutAction(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: { () -> Void in
+            //Implementar logout do usuário.
+        })
+    }
 
 }
 

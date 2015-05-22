@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  MainViewController.swift
 //  Mini#3
 //
 //  Created by Vitor Kawai Sala on 14/05/15.

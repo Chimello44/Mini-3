@@ -14,7 +14,9 @@
 		7E541D4A1B068447003D1A99 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E541D491B068447003D1A99 /* Video.swift */; };
 		7E541D501B068580003D1A99 /* VoiceReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E541D4F1B068580003D1A99 /* VoiceReq.swift */; };
 		7E541D521B0685AF003D1A99 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E541D511B0685AF003D1A99 /* ConfigManager.swift */; };
-		EB2D8A631B0CEEA400BE5C21 /* NewCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2D8A621B0CEEA400BE5C21 /* NewCategoryView.xib */; };
+		7E93C7F11B0FDC69009994B0 /* ParseCoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E93C7F01B0FDC69009994B0 /* ParseCoreManager.swift */; };
+		7E93C7F31B0FE19B009994B0 /* NewCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E93C7F21B0FE19B009994B0 /* NewCategoryView.xib */; };
+		7EAB31E01B0F97C700236B42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB31DF1B0F97C700236B42 /* LoginViewController.swift */; };
 		EB3668021B0A7D2E00046C79 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3668011B0A7D2E00046C79 /* Media.swift */; };
 		EB3668051B0A90A100046C79 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3668041B0A90A100046C79 /* CategoryManager.swift */; };
 		EB3668091B0A942C00046C79 /* NewCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3668081B0A942C00046C79 /* NewCategoryView.swift */; };
@@ -24,7 +26,7 @@
 		EB8C9B211B0E66CF0096F2E3 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8C9B201B0E66CF0096F2E3 /* Main-iPad.storyboard */; };
 		EBB1D8431B05347900F8D8B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D8421B05347900F8D8B1 /* AppDelegate.swift */; };
 		EBB1D8451B05347900F8D8B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D8441B05347900F8D8B1 /* MainViewController.swift */; };
-		EBB1D8471B05347900F8D8B1 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D8461B05347900F8D8B1 /* ConfigViewController.swift */; };
+		EBB1D8471B05347900F8D8B1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D8461B05347900F8D8B1 /* SettingsViewController.swift */; };
 		EBB1D84A1B05347900F8D8B1 /* Main-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB1D8481B05347900F8D8B1 /* Main-iPhone.storyboard */; };
 		EBB1D84C1B05347900F8D8B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB1D84B1B05347900F8D8B1 /* Images.xcassets */; };
 		EBB1D84F1B05347900F8D8B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB1D84D1B05347900F8D8B1 /* LaunchScreen.xib */; };
@@ -52,7 +54,9 @@
 		7E541D491B068447003D1A99 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		7E541D4F1B068580003D1A99 /* VoiceReq.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceReq.swift; sourceTree = "<group>"; };
 		7E541D511B0685AF003D1A99 /* ConfigManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
-		EB2D8A621B0CEEA400BE5C21 /* NewCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCategoryView.xib; sourceTree = "<group>"; };
+		7E93C7F01B0FDC69009994B0 /* ParseCoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseCoreManager.swift; sourceTree = "<group>"; };
+		7E93C7F21B0FE19B009994B0 /* NewCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCategoryView.xib; sourceTree = "<group>"; };
+		7EAB31DF1B0F97C700236B42 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EB3668011B0A7D2E00046C79 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		EB3668041B0A90A100046C79 /* CategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
 		EB3668081B0A942C00046C79 /* NewCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryView.swift; sourceTree = "<group>"; };
@@ -60,12 +64,11 @@
 		EB4660DB1B0BDE5600CAD9EE /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		EB6C4F491B0FA01A00888C89 /* CategoryRenameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRenameView.swift; sourceTree = "<group>"; };
 		EB8C9B201B0E66CF0096F2E3 /* Main-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main-iPad.storyboard"; sourceTree = "<group>"; };
-		EB8C9B411B0E67060096F2E3 /* Mini#3 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mini#3 copy-Info.plist"; path = "/Users/vitorkawai/Documents/mackmobile/Trabalhos/Mini-3/Mini#3/Mini#3 copy-Info.plist"; sourceTree = "<absolute>"; };
 		EBB1D83D1B05347900F8D8B1 /* Mini#3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini#3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB1D8411B05347900F8D8B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBB1D8421B05347900F8D8B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB1D8441B05347900F8D8B1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		EBB1D8461B05347900F8D8B1 /* ConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
+		EBB1D8461B05347900F8D8B1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EBB1D8491B05347900F8D8B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-iPhone.storyboard"; sourceTree = "<group>"; };
 		EBB1D84B1B05347900F8D8B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EBB1D84E1B05347900F8D8B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 		7E541D3C1B0682E6003D1A99 /* Parse */ = {
 			isa = PBXGroup;
 			children = (
+				7E93C7EE1B0FDBF7009994B0 /* Local */,
+				7E93C7EF1B0FDC07009994B0 /* Core */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -152,6 +157,21 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		7E93C7EE1B0FDBF7009994B0 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Local;
+			sourceTree = "<group>";
+		};
+		7E93C7EF1B0FDC07009994B0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7E93C7F01B0FDC69009994B0 /* ParseCoreManager.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		EB3667FF1B0A4C7B00046C79 /* xib */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +179,7 @@
 				EB8C9B201B0E66CF0096F2E3 /* Main-iPad.storyboard */,
 				EBB1D86A1B053ECA00F8D8B1 /* GalleryItemView.xib */,
 				EBB1D84D1B05347900F8D8B1 /* LaunchScreen.xib */,
-				EB2D8A621B0CEEA400BE5C21 /* NewCategoryView.xib */,
+				7E93C7F21B0FE19B009994B0 /* NewCategoryView.xib */,
 			);
 			name = xib;
 			sourceTree = "<group>";
@@ -167,10 +187,11 @@
 		EB3668001B0A5D6400046C79 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7EAB31DF1B0F97C700236B42 /* LoginViewController.swift */,
 				EBB1D8441B05347900F8D8B1 /* MainViewController.swift */,
-				EBB1D8461B05347900F8D8B1 /* ConfigViewController.swift */,
-				EB3668081B0A942C00046C79 /* NewCategoryView.swift */,
 				EB6C4F491B0FA01A00888C89 /* CategoryRenameView.swift */,
+				EBB1D8461B05347900F8D8B1 /* SettingsViewController.swift */,
+				EB3668081B0A942C00046C79 /* NewCategoryView.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -198,7 +219,6 @@
 				EBB1D83F1B05347900F8D8B1 /* Mini#3 */,
 				EBB1D8571B05347900F8D8B1 /* Mini#3Tests */,
 				EBB1D83E1B05347900F8D8B1 /* Products */,
-				EB8C9B411B0E67060096F2E3 /* Mini#3 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -341,7 +361,7 @@
 				EBB1D86B1B053ECA00F8D8B1 /* GalleryItemView.xib in Resources */,
 				EBB1D84F1B05347900F8D8B1 /* LaunchScreen.xib in Resources */,
 				EBB1D84C1B05347900F8D8B1 /* Images.xcassets in Resources */,
-				EB2D8A631B0CEEA400BE5C21 /* NewCategoryView.xib in Resources */,
+				7E93C7F31B0FE19B009994B0 /* NewCategoryView.xib in Resources */,
 				EB8C9B211B0E66CF0096F2E3 /* Main-iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,16 +380,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EAB31E01B0F97C700236B42 /* LoginViewController.swift in Sources */,
 				7E541D481B068430003D1A99 /* Photo.swift in Sources */,
 				EB3668091B0A942C00046C79 /* NewCategoryView.swift in Sources */,
 				EB3668051B0A90A100046C79 /* CategoryManager.swift in Sources */,
 				EB4660DC1B0BDE5600CAD9EE /* Stack.swift in Sources */,
 				7E541D3F1B0683B2003D1A99 /* User.swift in Sources */,
 				EB4660D91B0BADB100CAD9EE /* Item.swift in Sources */,
+				7E93C7F11B0FDC69009994B0 /* ParseCoreManager.swift in Sources */,
 				EBB1D8711B0687A900F8D8B1 /* Gallery.swift in Sources */,
 				7E541D501B068580003D1A99 /* VoiceReq.swift in Sources */,
 				7E541D521B0685AF003D1A99 /* ConfigManager.swift in Sources */,
-				EBB1D8471B05347900F8D8B1 /* ConfigViewController.swift in Sources */,
+				EBB1D8471B05347900F8D8B1 /* SettingsViewController.swift in Sources */,
 				7E541D461B06841F003D1A99 /* MediaType.swift in Sources */,
 				EBB1D8431B05347900F8D8B1 /* AppDelegate.swift in Sources */,
 				7E541D4A1B068447003D1A99 /* Video.swift in Sources */,
