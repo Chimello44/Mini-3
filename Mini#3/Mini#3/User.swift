@@ -9,6 +9,19 @@
 import Foundation
 
 class User {
-    let rootCategory : Category = Category(name: "Principal",type: ItemType.Category)
-    let favorite : Category = Category(name: "Principal",type: ItemType.Category)
+
+    /**
+    *  é a categoria raíz de cada um dos usuários (Pasta inicial)
+    */
+    lazy var rootCategory : Category = {
+        return Category(name: "Principal",type: ItemType.Category)
+    }()
+
+    /**
+    *  Categorias e/ou galerias marcadas como favoritos para um determinado usuário
+    *  Este será exibido só na table inicial.
+    */
+    lazy var favorite : Category = {
+        Category(name: "Principal",type: ItemType.Category)
+    }()
 }

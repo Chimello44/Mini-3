@@ -14,12 +14,13 @@
 		7E541D4A1B068447003D1A99 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E541D491B068447003D1A99 /* Video.swift */; };
 		7E541D501B068580003D1A99 /* VoiceReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E541D4F1B068580003D1A99 /* VoiceReq.swift */; };
 		7E541D521B0685AF003D1A99 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E541D511B0685AF003D1A99 /* ConfigManager.swift */; };
-		EB2D8A631B0CEEA400BE5C21 /* NewCategory.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2D8A621B0CEEA400BE5C21 /* NewCategory.xib */; };
+		EB2D8A631B0CEEA400BE5C21 /* NewCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2D8A621B0CEEA400BE5C21 /* NewCategoryView.xib */; };
 		EB3668021B0A7D2E00046C79 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3668011B0A7D2E00046C79 /* Media.swift */; };
 		EB3668051B0A90A100046C79 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3668041B0A90A100046C79 /* CategoryManager.swift */; };
-		EB3668091B0A942C00046C79 /* NewCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3668081B0A942C00046C79 /* NewCategory.swift */; };
+		EB3668091B0A942C00046C79 /* NewCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3668081B0A942C00046C79 /* NewCategoryView.swift */; };
 		EB4660D91B0BADB100CAD9EE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4660D81B0BADB100CAD9EE /* Item.swift */; };
 		EB4660DC1B0BDE5600CAD9EE /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4660DB1B0BDE5600CAD9EE /* Stack.swift */; };
+		EB6C4F4A1B0FA01A00888C89 /* CategoryRenameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6C4F491B0FA01A00888C89 /* CategoryRenameView.swift */; };
 		EB8C9B211B0E66CF0096F2E3 /* Main-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8C9B201B0E66CF0096F2E3 /* Main-iPad.storyboard */; };
 		EBB1D8431B05347900F8D8B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D8421B05347900F8D8B1 /* AppDelegate.swift */; };
 		EBB1D8451B05347900F8D8B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D8441B05347900F8D8B1 /* MainViewController.swift */; };
@@ -51,12 +52,13 @@
 		7E541D491B068447003D1A99 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		7E541D4F1B068580003D1A99 /* VoiceReq.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceReq.swift; sourceTree = "<group>"; };
 		7E541D511B0685AF003D1A99 /* ConfigManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
-		EB2D8A621B0CEEA400BE5C21 /* NewCategory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCategory.xib; sourceTree = "<group>"; };
+		EB2D8A621B0CEEA400BE5C21 /* NewCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCategoryView.xib; sourceTree = "<group>"; };
 		EB3668011B0A7D2E00046C79 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		EB3668041B0A90A100046C79 /* CategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
-		EB3668081B0A942C00046C79 /* NewCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategory.swift; sourceTree = "<group>"; };
+		EB3668081B0A942C00046C79 /* NewCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryView.swift; sourceTree = "<group>"; };
 		EB4660D81B0BADB100CAD9EE /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EB4660DB1B0BDE5600CAD9EE /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		EB6C4F491B0FA01A00888C89 /* CategoryRenameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRenameView.swift; sourceTree = "<group>"; };
 		EB8C9B201B0E66CF0096F2E3 /* Main-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Main-iPad.storyboard"; sourceTree = "<group>"; };
 		EB8C9B411B0E67060096F2E3 /* Mini#3 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mini#3 copy-Info.plist"; path = "/Users/vitorkawai/Documents/mackmobile/Trabalhos/Mini-3/Mini#3/Mini#3 copy-Info.plist"; sourceTree = "<absolute>"; };
 		EBB1D83D1B05347900F8D8B1 /* Mini#3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini#3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,7 +159,7 @@
 				EB8C9B201B0E66CF0096F2E3 /* Main-iPad.storyboard */,
 				EBB1D86A1B053ECA00F8D8B1 /* GalleryItemView.xib */,
 				EBB1D84D1B05347900F8D8B1 /* LaunchScreen.xib */,
-				EB2D8A621B0CEEA400BE5C21 /* NewCategory.xib */,
+				EB2D8A621B0CEEA400BE5C21 /* NewCategoryView.xib */,
 			);
 			name = xib;
 			sourceTree = "<group>";
@@ -167,7 +169,8 @@
 			children = (
 				EBB1D8441B05347900F8D8B1 /* MainViewController.swift */,
 				EBB1D8461B05347900F8D8B1 /* ConfigViewController.swift */,
-				EB3668081B0A942C00046C79 /* NewCategory.swift */,
+				EB3668081B0A942C00046C79 /* NewCategoryView.swift */,
+				EB6C4F491B0FA01A00888C89 /* CategoryRenameView.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -297,6 +300,12 @@
 				TargetAttributes = {
 					EBB1D83C1B05347900F8D8B1 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = KY9XTC3U67;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 0;
+							};
+						};
 					};
 					EBB1D8531B05347900F8D8B1 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -332,7 +341,7 @@
 				EBB1D86B1B053ECA00F8D8B1 /* GalleryItemView.xib in Resources */,
 				EBB1D84F1B05347900F8D8B1 /* LaunchScreen.xib in Resources */,
 				EBB1D84C1B05347900F8D8B1 /* Images.xcassets in Resources */,
-				EB2D8A631B0CEEA400BE5C21 /* NewCategory.xib in Resources */,
+				EB2D8A631B0CEEA400BE5C21 /* NewCategoryView.xib in Resources */,
 				EB8C9B211B0E66CF0096F2E3 /* Main-iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,7 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E541D481B068430003D1A99 /* Photo.swift in Sources */,
-				EB3668091B0A942C00046C79 /* NewCategory.swift in Sources */,
+				EB3668091B0A942C00046C79 /* NewCategoryView.swift in Sources */,
 				EB3668051B0A90A100046C79 /* CategoryManager.swift in Sources */,
 				EB4660DC1B0BDE5600CAD9EE /* Stack.swift in Sources */,
 				7E541D3F1B0683B2003D1A99 /* User.swift in Sources */,
@@ -367,6 +376,7 @@
 				7E541D411B0683D3003D1A99 /* Group.swift in Sources */,
 				EB3668021B0A7D2E00046C79 /* Media.swift in Sources */,
 				EBB1D8451B05347900F8D8B1 /* MainViewController.swift in Sources */,
+				EB6C4F4A1B0FA01A00888C89 /* CategoryRenameView.swift in Sources */,
 				EBB1D86F1B06879D00F8D8B1 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,9 +506,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Mini#3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -507,9 +520,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Mini#3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

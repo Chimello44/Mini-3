@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" textLabel="T7t-KQ-G6Y" detailTextLabel="O78-zS-FzM" style="IBUITableViewCellStyleSubtitle" id="xWy-63-5PB">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="categoryCell" textLabel="T7t-KQ-G6Y" detailTextLabel="O78-zS-FzM" style="IBUITableViewCellStyleSubtitle" id="xWy-63-5PB">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xWy-63-5PB" id="VcI-gw-pJd">
@@ -42,7 +42,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="galleryCell" textLabel="Jf1-k9-pI2" detailTextLabel="bsI-ds-tOa" rowHeight="44" style="IBUITableViewCellStyleSubtitle" id="OcB-Un-GkE" userLabel="galleryCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="galleryCell" textLabel="Jf1-k9-pI2" detailTextLabel="bsI-ds-tOa" rowHeight="44" style="IBUITableViewCellStyleSubtitle" id="OcB-Un-GkE" userLabel="galleryCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OcB-Un-GkE" id="EJa-aN-aqo">
@@ -128,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="-189"/>
+            <point key="canvasLocation" x="1722" y="-143.25"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rll-IF-oyn">
@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIi-FF-QLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="525.75"/>
+            <point key="canvasLocation" x="1722" y="571.5"/>
         </scene>
         <!--First-->
         <scene sceneID="Vca-1g-y1q">
@@ -179,7 +179,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5T-cz-c3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="549" y="-183"/>
+            <point key="canvasLocation" x="885" y="-137.25"/>
         </scene>
     </scenes>
     <resources>

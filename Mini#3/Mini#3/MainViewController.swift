@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NewCategoryDelegate {
 
-    private var newCategoryView : NewCategory!
+    private var newCategoryView : NewCategoryView!
     private var selectedIndex : NSIndexPath?
 
 
@@ -25,7 +25,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        newCategoryView = NSBundle.mainBundle().loadNibNamed("NewCategory", owner: self, options: nil).first as! NewCategory
+        newCategoryView = NSBundle.mainBundle().loadNibNamed("NewCategoryView", owner: self, options: nil).first as! NewCategoryView
         newCategoryView.delegate = self
 
         currentCategory = catman.currentCategory
@@ -46,12 +46,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     // MARK:- NewCategoryDelegte
-    func DidSubmitNewCategory(view : NewCategory, categoryName: String) {
+    func DidSubmitNewCategory(view : NewCategoryView, categoryName: String) {
         if categoryName != ""{
             catman.addCategory(categoryName, iconNamed: "")
         }
         view.removeFromSuperview()
         tableView.reloadData()
+        self.navigationController?.navigationItem.rightBarButtonItem?.enabled = true
+    }
+
+    func DidCancelNewCategory(view: NewCategoryView) {
+        
+        self.navigationController?.navigationItem.rightBarButtonItem?.enabled = true
     }
 
     // MARK:- Table View Delegate
@@ -74,13 +80,41 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         return true
     }
 
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 
-        self.catman.removeCategoryAtIndex(indexPath.row)
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        let rename = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Renomear") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
 
-        self.tableView.reloadData()
+            println("ROAR")
+        }
+
+        rename.backgroundColor = UIColor.greenColor()
+
+        let delete = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Deletar") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
+
+            let deleteAlert = UIAlertController(title: "Apagar?", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+
+            deleteAlert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Cancel, handler: { (a:UIAlertAction!) -> Void in
+
+            }))
+
+            deleteAlert.addAction(UIAlertAction(title: "FUS ROH DAH", style: UIAlertActionStyle.Destructive, handler: { (a:UIAlertAction!) -> Void in
+                self.catman.removeCategoryAtIndex(indexPath.row)
+                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Left)
+
+            }))
+
+            self.presentViewController(deleteAlert, animated: true, completion: nil)
+
+        }
+
+        delete.backgroundColor = UIColor.redColor()
+
+        return [rename,delete]
     }
 
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
     // MARK:- Data Source delegate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.currentCategory!.subcategory.count
@@ -109,7 +143,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     // MARK:- Buttons Action
     @IBAction func btnAddEntry(sender: AnyObject) {
-
+        self.navigationController?.navigationItem.rightBarButtonItem?.enabled = false
         self.view.addSubview(newCategoryView)
     }
 

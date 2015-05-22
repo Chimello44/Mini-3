@@ -9,10 +9,13 @@
 import UIKit
 
 protocol NewCategoryDelegate{
-    func DidSubmitNewCategory(view : NewCategory, categoryName: String)
+
+    func DidSubmitNewCategory(view : NewCategoryView, categoryName: String)
+
+    func DidCancelNewCategory(view : NewCategoryView)
 }
 
-class NewCategory : UIView {
+class NewCategoryView : UIView {
     @IBOutlet weak var txtField: UITextField!
     @IBOutlet weak var viewCenter: NewCategorySubView!
     @IBOutlet weak var visualEffect: UIVisualEffectView!
@@ -31,7 +34,7 @@ class NewCategory : UIView {
 
     @IBAction func btnCancel(sender: AnyObject) {
         txtField.resignFirstResponder()
-        self.removeFromSuperview()
+        delegate?.DidCancelNewCategory(self)
     }
 }
 
