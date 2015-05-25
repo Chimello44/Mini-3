@@ -23,7 +23,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-W4-5pV" userLabel="login">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-W4-5pV">
                                 <rect key="frame" x="196" y="313" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="mwl-vT-Aes"/>
@@ -51,7 +51,7 @@
                                     <constraint firstAttribute="width" constant="200" id="Uto-AC-fmc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Ehh-28-N9a"/>
@@ -72,7 +72,7 @@
                                     <constraint firstAttribute="height" constant="30" id="gmt-kf-qda"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="U2n-8T-h5C"/>
@@ -226,8 +226,8 @@
                     <navigationItem key="navigationItem" id="oh1-s7-fWK"/>
                     <connections>
                         <outlet property="confirmTextField" destination="Qma-eN-GR5" id="ELa-a9-zVn"/>
-                        <outlet property="loginTextField" destination="SLw-W4-5pV" id="opB-78-WAs"/>
                         <outlet property="passwordTextField" destination="RPh-eJ-TTY" id="HGZ-Eg-Oso"/>
+                        <outlet property="usernameTextField" destination="SLw-W4-5pV" id="RJX-aY-auY"/>
                         <outlet property="validationSubview" destination="fE5-21-fwN" id="WVw-ea-V78"/>
                         <segue destination="dZJ-fX-gUX" kind="show" identifier="loggedSegue" id="ht1-0b-dtb"/>
                     </connections>
@@ -484,7 +484,7 @@
         <scene sceneID="wcw-Hl-dpi">
             <objects>
                 <navigationController title="Settings Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="gBN-KG-S6R" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="aUn-od-3Pb"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="second" id="aUn-od-3Pb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NXh-ma-Oc6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -502,5 +502,6 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
     </resources>
 </document>

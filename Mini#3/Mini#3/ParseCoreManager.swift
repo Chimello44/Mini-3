@@ -10,8 +10,19 @@ import Foundation
 
 class ParseCoreManager {
     
-    let sharedInstance = ParseCoreManager();
+    static let sharedInstance = ParseCoreManager();
     
-    
+    func createUser(username: String, password: String) {
+        var newUser = PFUser();
+        newUser.username = username;
+        newUser.password = password;
+        newUser.signUpInBackgroundWithBlock { (success, error) -> Void in
+            
+            println(error!.localizedDescription)
+            
+        }
+        
+        
+    }
     
 }

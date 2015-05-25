@@ -12,7 +12,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var validationSubview: UIView!
     
-    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -23,7 +23,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        self.navigationController?.navigationBarHidden = true;
         forEachUITextFieldDoBlock { (textField) -> Void in
             textField.delegate = self;
         }
@@ -51,7 +50,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func createAction(sender: UIButton) {
-        
+        var pCoreManager = ParseCoreManager.sharedInstance;
+        pCoreManager.createUser(usernameTextField.text, password: passwordTextField.text);
     }
     
     //MARK: Text Field
