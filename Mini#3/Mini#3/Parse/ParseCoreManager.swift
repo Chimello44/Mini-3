@@ -12,17 +12,19 @@ class ParseCoreManager {
     
     static let sharedInstance = ParseCoreManager();
     
-    func createUser(username: String, password: String) {
+    func userLogin(username: String, password: String, errorHandler: (error: NSError?) -> Void) {
+        PFUser.logInWithUsernameInBackground(username, password: password) { (user, error) -> Void in
+            errorHandler(error: error);
+        }
+    }
+    
+    func createUser(username: String, password: String, errorHandler: (error: NSError?) -> Void) {
         var newUser = PFUser();
         newUser.username = username;
         newUser.password = password;
-        newUser.signUpInBackgroundWithBlock { (success, error) -> Void in
-            
-            println(error!.localizedDescription)
-            
+        newUser.signUpInBackgroundWithBlock { (succeeded, error) -> Void in
+           errorHandler(error: error);
         }
-        
-        
     }
     
 }

@@ -254,9 +254,9 @@
 		7EA2B44B1B13935E0048C06D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7EA2B44C1B13935E0048C06D /* CategoryRenameView.swift */,
 				7EA2B44D1B13935E0048C06D /* LoginViewController.swift */,
 				7EA2B44E1B13935E0048C06D /* MainViewController.swift */,
+				7EA2B44C1B13935E0048C06D /* CategoryRenameView.swift */,
 				7EA2B44F1B13935E0048C06D /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
