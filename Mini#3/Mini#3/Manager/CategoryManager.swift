@@ -8,9 +8,8 @@
 
 import Foundation
 
-
-
 class CategoryManager{
+    
     static let sharedInstance = CategoryManager()
 
     private init(){

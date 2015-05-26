@@ -10,6 +10,8 @@ import Foundation
 
 class ConfigManager {
     
+    static let sharedInstance = ConfigManager();
+    
     var user: User!
     
 }
