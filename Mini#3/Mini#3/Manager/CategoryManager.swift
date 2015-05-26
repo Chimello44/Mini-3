@@ -13,6 +13,7 @@ class CategoryManager{
     static let sharedInstance = CategoryManager()
 
     private init(){
+        // TODO: Resgatar os dados do parse
         self.currentUser = User()
         self.currentCategory = self.currentUser?.rootCategory
         self.favoriteCategory = self.currentUser?.favorite
@@ -63,5 +64,9 @@ class CategoryManager{
         if self.categoryStack.size() > 0 {
             self.currentCategory = self.categoryStack.pop()
         }
+    }
+
+    func isRoot() -> Bool{
+        return categoryStack.size() == 0
     }
 }

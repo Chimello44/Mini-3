@@ -17,7 +17,6 @@
 		7EA2B40C1B137DA30048C06D /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA2B4061B137DA30048C06D /* ParseFacebookUtilsV4.framework */; };
 		7EA2B40D1B137DA30048C06D /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA2B4071B137DA30048C06D /* ParseUI.framework */; };
 		7EA2B40F1B137DCB0048C06D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA2B40E1B137DCB0048C06D /* AudioToolbox.framework */; };
-		7EA2B4111B137DD40048C06D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA2B4101B137DD40048C06D /* SystemConfiguration.framework */; };
 		7EA2B4131B137DDA0048C06D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA2B4121B137DDA0048C06D /* MobileCoreServices.framework */; };
 		7EA2B4221B13904F0048C06D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2B41A1B13904F0048C06D /* Images.xcassets */; };
 		7EA2B4501B13935E0048C06D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2B42B1B13935E0048C06D /* LaunchScreen.xib */; };
@@ -48,6 +47,8 @@
 		EB516A4E1B14E05600F5FDE1 /* ViewPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB516A4D1B14E05600F5FDE1 /* ViewPhoto.swift */; };
 		EB516A501B14E09000F5FDE1 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB516A4F1B14E09000F5FDE1 /* PhotoCell.swift */; };
 		EB516A521B14E4B400F5FDE1 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB516A511B14E4B400F5FDE1 /* GalleryViewController.swift */; };
+		EB516A541B15163200F5FDE1 /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB516A531B15163200F5FDE1 /* NetworkChecker.swift */; };
+		EB516A551B1516CE00F5FDE1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA2B4101B137DD40048C06D /* SystemConfiguration.framework */; };
 		EBB1D8431B05347900F8D8B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D8421B05347900F8D8B1 /* AppDelegate.swift */; };
 		EBB1D85B1B05347900F8D8B1 /* Mini_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D85A1B05347900F8D8B1 /* Mini_3Tests.swift */; };
 /* End PBXBuildFile section */
@@ -99,12 +100,13 @@
 		7EA2B44D1B13935E0048C06D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7EA2B44E1B13935E0048C06D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7EA2B44F1B13935E0048C06D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		7EA2B4681B1393D60048C06D /* Mini#3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mini#3-Bridging-Header.h"; sourceTree = "<group>"; };
+		7EA2B4681B1393D60048C06D /* Mini#3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Mini#3-Bridging-Header.h"; path = "../Parse/Mini#3-Bridging-Header.h"; sourceTree = "<group>"; };
 		EB516A431B13957D00F5FDE1 /* DispatchQueueType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueType.swift; sourceTree = "<group>"; };
 		EB516A4A1B14DFE700F5FDE1 /* GalleryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryManager.swift; sourceTree = "<group>"; };
 		EB516A4D1B14E05600F5FDE1 /* ViewPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPhoto.swift; sourceTree = "<group>"; };
 		EB516A4F1B14E09000F5FDE1 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		EB516A511B14E4B400F5FDE1 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		EB516A531B15163200F5FDE1 /* NetworkChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
 		EBB1D83D1B05347900F8D8B1 /* Mini#3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini#3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB1D8411B05347900F8D8B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBB1D8421B05347900F8D8B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,8 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB516A551B1516CE00F5FDE1 /* SystemConfiguration.framework in Frameworks */,
 				7EA2B4131B137DDA0048C06D /* MobileCoreServices.framework in Frameworks */,
-				7EA2B4111B137DD40048C06D /* SystemConfiguration.framework in Frameworks */,
 				7EA2B40F1B137DCB0048C06D /* AudioToolbox.framework in Frameworks */,
 				7EA2B40D1B137DA30048C06D /* ParseUI.framework in Frameworks */,
 				7EA2B40B1B137DA30048C06D /* ParseFacebookUtils.framework in Frameworks */,
@@ -227,7 +229,6 @@
 		7EA2B4421B13935E0048C06D /* Parse */ = {
 			isa = PBXGroup;
 			children = (
-				7EA2B4681B1393D60048C06D /* Mini#3-Bridging-Header.h */,
 				7EA2B4441B13935E0048C06D /* ParseCoreManager.swift */,
 			);
 			path = Parse;
@@ -236,8 +237,10 @@
 		7EA2B4451B13935E0048C06D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				7EA2B4681B1393D60048C06D /* Mini#3-Bridging-Header.h */,
 				7EA2B4461B13935E0048C06D /* Stack.swift */,
 				EB516A431B13957D00F5FDE1 /* DispatchQueueType.swift */,
+				EB516A531B15163200F5FDE1 /* NetworkChecker.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				7EA2B4551B13935E0048C06D /* Item.swift in Sources */,
 				7EA2B45D1B13935E0048C06D /* CategoryManager.swift in Sources */,
 				EBB1D8431B05347900F8D8B1 /* AppDelegate.swift in Sources */,
+				EB516A541B15163200F5FDE1 /* NetworkChecker.swift in Sources */,
 				EB516A4E1B14E05600F5FDE1 /* ViewPhoto.swift in Sources */,
 				7EA2B4541B13935E0048C06D /* Gallery.swift in Sources */,
 				7EA2B4591B13935E0048C06D /* Video.swift in Sources */,

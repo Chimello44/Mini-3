@@ -87,6 +87,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
 
             self.newItemView.title.text = "Editar nome"
+            self.newItemView.txtField.text = self.currentCategory?.subcategory[indexPath.row].name
 
             self.view.addSubview(self.newItemView)
         }
@@ -148,7 +149,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     // MARK:- Buttons Action
     @IBAction func btnAddEntry(sender: AnyObject) {
+
         self.navigationController?.navigationItem.rightBarButtonItem?.enabled = false
+
         let actionsheet = UIAlertController(title: "O que vai adicionar?", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
 
         actionsheet.addAction(UIAlertAction(title: "Nova Pasta", style: UIAlertActionStyle.Default, handler: { (alert : UIAlertAction!) -> Void in

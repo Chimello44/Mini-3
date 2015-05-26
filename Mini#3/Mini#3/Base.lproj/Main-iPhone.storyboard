@@ -197,16 +197,16 @@
                                 <exclude reference="QVE-Jz-E9z"/>
                                 <exclude reference="lyk-ub-xHe"/>
                                 <exclude reference="t7V-ps-Cc3"/>
-                                <exclude reference="Vj2-fT-6gA"/>
+                                <exclude reference="e7k-Pe-h7I"/>
                                 <exclude reference="oJH-Ga-aJu"/>
                                 <exclude reference="p9O-Ua-LL5"/>
-                                <exclude reference="e7k-Pe-h7I"/>
                                 <exclude reference="Bf6-GZ-eVq"/>
                                 <exclude reference="o2c-U4-DoA"/>
-                                <exclude reference="c3b-Rp-VFO"/>
-                                <exclude reference="l4H-vJ-fbg"/>
+                                <exclude reference="Vj2-fT-6gA"/>
                                 <exclude reference="8bQ-Cm-Ubm"/>
                                 <exclude reference="oKh-ju-kFq"/>
+                                <exclude reference="c3b-Rp-VFO"/>
+                                <exclude reference="l4H-vJ-fbg"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -222,16 +222,16 @@
                                 <include reference="QVE-Jz-E9z"/>
                                 <include reference="lyk-ub-xHe"/>
                                 <include reference="t7V-ps-Cc3"/>
-                                <include reference="Vj2-fT-6gA"/>
+                                <include reference="e7k-Pe-h7I"/>
                                 <include reference="oJH-Ga-aJu"/>
                                 <include reference="p9O-Ua-LL5"/>
-                                <include reference="e7k-Pe-h7I"/>
                                 <include reference="Bf6-GZ-eVq"/>
                                 <include reference="o2c-U4-DoA"/>
-                                <include reference="c3b-Rp-VFO"/>
-                                <include reference="l4H-vJ-fbg"/>
+                                <include reference="Vj2-fT-6gA"/>
                                 <include reference="8bQ-Cm-Ubm"/>
                                 <include reference="oKh-ju-kFq"/>
+                                <include reference="c3b-Rp-VFO"/>
+                                <include reference="l4H-vJ-fbg"/>
                             </mask>
                         </variation>
                     </view>
@@ -486,6 +486,7 @@
                         <viewControllerLayoutGuide type="bottom" id="NUU-sM-mFK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Sh-wz-jW0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ta5-Os-pMn">

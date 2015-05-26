@@ -24,6 +24,10 @@ class EditItemView : UIView {
         self.frame = UIScreen.mainScreen().bounds
     }
 
+    func setTxtFieldText(text : String){
+        txtField.text = text
+    }
+
     func addSaveHandler(handler : (String, EditItemView) -> ()){
         self.saveHandler = { handler($0, $1) }
     }
