@@ -33,6 +33,11 @@ class CategoryManager{
         self.currentCategory?.addItem(newcat)
     }
 
+    func addGallery(name: String, iconNamed: String){
+        let newgal = Gallery(name: name, imageIcon: iconNamed)
+        self.currentCategory?.addItem(newgal)
+    }
+
     func addFavorite(item : Item){
         self.currentUser?.favorite.addItem(item)
     }

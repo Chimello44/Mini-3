@@ -9,7 +9,7 @@
 import Foundation
 
 class Stack<T>{
-    var stack : Array<T> = []
+    private var stack : Array<T> = []
 
     func push(a : T){
         stack.append(a)

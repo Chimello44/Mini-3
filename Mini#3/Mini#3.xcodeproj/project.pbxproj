@@ -37,12 +37,13 @@
 		7EA2B45E1B13935E0048C06D /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B4411B13935E0048C06D /* ConfigManager.swift */; };
 		7EA2B45F1B13935E0048C06D /* ParseCoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B4441B13935E0048C06D /* ParseCoreManager.swift */; };
 		7EA2B4601B13935E0048C06D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B4461B13935E0048C06D /* Stack.swift */; };
-		7EA2B4611B13935E0048C06D /* NewCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B4491B13935E0048C06D /* NewCategoryView.swift */; };
-		7EA2B4621B13935E0048C06D /* NewCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2B44A1B13935E0048C06D /* NewCategoryView.xib */; };
+		7EA2B4611B13935E0048C06D /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B4491B13935E0048C06D /* EditItemView.swift */; };
+		7EA2B4621B13935E0048C06D /* EditItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EA2B44A1B13935E0048C06D /* EditItemView.xib */; };
 		7EA2B4631B13935E0048C06D /* CategoryRenameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B44C1B13935E0048C06D /* CategoryRenameView.swift */; };
 		7EA2B4641B13935E0048C06D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B44D1B13935E0048C06D /* LoginViewController.swift */; };
 		7EA2B4651B13935E0048C06D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B44E1B13935E0048C06D /* MainViewController.swift */; };
 		7EA2B4661B13935E0048C06D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B44F1B13935E0048C06D /* SettingsViewController.swift */; };
+		EB516A441B13957D00F5FDE1 /* DispatchQueueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB516A431B13957D00F5FDE1 /* DispatchQueueType.swift */; };
 		EBB1D8431B05347900F8D8B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D8421B05347900F8D8B1 /* AppDelegate.swift */; };
 		EBB1D85B1B05347900F8D8B1 /* Mini_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1D85A1B05347900F8D8B1 /* Mini_3Tests.swift */; };
 /* End PBXBuildFile section */
@@ -88,13 +89,14 @@
 		7EA2B4411B13935E0048C06D /* ConfigManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
 		7EA2B4441B13935E0048C06D /* ParseCoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseCoreManager.swift; sourceTree = "<group>"; };
 		7EA2B4461B13935E0048C06D /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		7EA2B4491B13935E0048C06D /* NewCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryView.swift; sourceTree = "<group>"; };
-		7EA2B44A1B13935E0048C06D /* NewCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCategoryView.xib; sourceTree = "<group>"; };
+		7EA2B4491B13935E0048C06D /* EditItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
+		7EA2B44A1B13935E0048C06D /* EditItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditItemView.xib; sourceTree = "<group>"; };
 		7EA2B44C1B13935E0048C06D /* CategoryRenameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRenameView.swift; sourceTree = "<group>"; };
 		7EA2B44D1B13935E0048C06D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7EA2B44E1B13935E0048C06D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7EA2B44F1B13935E0048C06D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7EA2B4681B1393D60048C06D /* Mini#3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mini#3-Bridging-Header.h"; sourceTree = "<group>"; };
+		EB516A431B13957D00F5FDE1 /* DispatchQueueType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueType.swift; sourceTree = "<group>"; };
 		EBB1D83D1B05347900F8D8B1 /* Mini#3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini#3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB1D8411B05347900F8D8B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBB1D8421B05347900F8D8B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				7EA2B4461B13935E0048C06D /* Stack.swift */,
+				EB516A431B13957D00F5FDE1 /* DispatchQueueType.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -232,18 +235,19 @@
 		7EA2B4471B13935E0048C06D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7EA2B4481B13935E0048C06D /* NewCategoryView */,
+				7EA2B4481B13935E0048C06D /* NewItemView */,
 				7EA2B44B1B13935E0048C06D /* ViewControllers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		7EA2B4481B13935E0048C06D /* NewCategoryView */ = {
+		7EA2B4481B13935E0048C06D /* NewItemView */ = {
 			isa = PBXGroup;
 			children = (
-				7EA2B4491B13935E0048C06D /* NewCategoryView.swift */,
-				7EA2B44A1B13935E0048C06D /* NewCategoryView.xib */,
+				7EA2B4491B13935E0048C06D /* EditItemView.swift */,
+				7EA2B44A1B13935E0048C06D /* EditItemView.xib */,
 			);
+			name = NewItemView;
 			path = NewCategoryView;
 			sourceTree = "<group>";
 		};
@@ -407,7 +411,7 @@
 				7EA2B4521B13935E0048C06D /* Main-iPhone.storyboard in Resources */,
 				7EA2B4221B13904F0048C06D /* Images.xcassets in Resources */,
 				7EA2B4501B13935E0048C06D /* LaunchScreen.xib in Resources */,
-				7EA2B4621B13935E0048C06D /* NewCategoryView.xib in Resources */,
+				7EA2B4621B13935E0048C06D /* EditItemView.xib in Resources */,
 				7EA2B4511B13935E0048C06D /* Main-iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +435,8 @@
 				7EA2B4601B13935E0048C06D /* Stack.swift in Sources */,
 				7EA2B4661B13935E0048C06D /* SettingsViewController.swift in Sources */,
 				7EA2B4571B13935E0048C06D /* MediaType.swift in Sources */,
-				7EA2B4611B13935E0048C06D /* NewCategoryView.swift in Sources */,
+				EB516A441B13957D00F5FDE1 /* DispatchQueueType.swift in Sources */,
+				7EA2B4611B13935E0048C06D /* EditItemView.swift in Sources */,
 				7EA2B4651B13935E0048C06D /* MainViewController.swift in Sources */,
 				7EA2B45A1B13935E0048C06D /* VoiceReq.swift in Sources */,
 				7EA2B45B1B13935E0048C06D /* Group.swift in Sources */,

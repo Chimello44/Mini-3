@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="23y-YV-dCZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="23y-YV-dCZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -114,7 +114,7 @@
                                     <rect key="frame" x="100" y="520" width="48" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="toggleAccountCreation:" destination="23y-YV-dCZ" eventType="touchUpInside" id="r8n-f2-K2c"/>
+                                    <action selector="toggleAccountCreation:" destination="23y-YV-dCZ" eventType="touchUpInside" id="2jX-SX-QRd"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zE-0E-pxo">
@@ -156,6 +156,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="330" y="236" width="46" height="30"/>
+                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,10 +187,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="RJK-gs-bxO"/>
-                                <exclude reference="wRZ-Ri-llf"/>
                                 <exclude reference="bTW-aw-cDn"/>
                                 <exclude reference="hDh-AO-DQM"/>
+                                <exclude reference="RJK-gs-bxO"/>
+                                <exclude reference="wRZ-Ri-llf"/>
                                 <exclude reference="AHG-d4-gNN"/>
                                 <exclude reference="Ray-hc-Fie"/>
                                 <exclude reference="JF1-H9-CHy"/>
@@ -196,21 +199,21 @@
                                 <exclude reference="lyk-ub-xHe"/>
                                 <exclude reference="t7V-ps-Cc3"/>
                                 <exclude reference="e7k-Pe-h7I"/>
+                                <exclude reference="Vj2-fT-6gA"/>
                                 <exclude reference="Bf6-GZ-eVq"/>
                                 <exclude reference="o2c-U4-DoA"/>
                                 <exclude reference="8bQ-Cm-Ubm"/>
                                 <exclude reference="oKh-ju-kFq"/>
-                                <exclude reference="Vj2-fT-6gA"/>
                                 <exclude reference="c3b-Rp-VFO"/>
                                 <exclude reference="l4H-vJ-fbg"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="RJK-gs-bxO"/>
-                                <include reference="wRZ-Ri-llf"/>
                                 <include reference="bTW-aw-cDn"/>
                                 <exclude reference="hDh-AO-DQM"/>
+                                <include reference="RJK-gs-bxO"/>
+                                <include reference="wRZ-Ri-llf"/>
                                 <include reference="AHG-d4-gNN"/>
                                 <include reference="Ray-hc-Fie"/>
                                 <include reference="JF1-H9-CHy"/>
@@ -219,11 +222,11 @@
                                 <include reference="lyk-ub-xHe"/>
                                 <include reference="t7V-ps-Cc3"/>
                                 <include reference="e7k-Pe-h7I"/>
+                                <include reference="Vj2-fT-6gA"/>
                                 <include reference="Bf6-GZ-eVq"/>
                                 <include reference="o2c-U4-DoA"/>
                                 <include reference="8bQ-Cm-Ubm"/>
                                 <include reference="oKh-ju-kFq"/>
-                                <include reference="Vj2-fT-6gA"/>
                                 <include reference="c3b-Rp-VFO"/>
                                 <include reference="l4H-vJ-fbg"/>
                             </mask>
@@ -436,7 +439,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5T2-Ka-umJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Soon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5T2-Ka-umJ">
                                 <rect key="frame" x="280" y="245" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

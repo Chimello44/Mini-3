@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NewCategoryDelegate {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    private var newCategoryView : NewCategoryView!
+    private var newItemView : EditItemView!
     private var selectedIndex : NSIndexPath?
 
 
@@ -25,14 +25,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        newCategoryView = NSBundle.mainBundle().loadNibNamed("NewCategoryView", owner: self, options: nil).first as! NewCategoryView
-        newCategoryView.delegate = self
 
         currentCategory = catman.currentCategory
 
         self.title = currentCategory?.name
 
         self.tableView.setEditing(false, animated: false)
+
+
+        // New Item Setup
+        newItemView = NSBundle.mainBundle().loadNibNamed("NewItemView", owner: self, options: nil).first as! EditItemView
+
     }
 
     override func viewWillDisappear(animated: Bool) {
@@ -45,23 +48,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
     }
 
-    // MARK:- NewCategoryDelegte
-    func DidSubmitNewCategory(view : NewCategoryView, categoryName: String) {
-        if categoryName != ""{
-            catman.addCategory(categoryName, iconNamed: "")
-        }
-        view.removeFromSuperview()
-        tableView.reloadData()
-        self.navigationController?.navigationItem.rightBarButtonItem?.enabled = true
-    }
-
-    func DidCancelNewCategory(view: NewCategoryView) {
-        
-        self.navigationController?.navigationItem.rightBarButtonItem?.enabled = true
-    }
-
     // MARK:- Table View Delegate
-
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selected = currentCategory?.subcategory[indexPath.row] as! Category
 
@@ -84,7 +71,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
         let rename = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Renomear") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
 
-            println("ROAR")
+            self.newItemView.addSaveHandler({ (name : String, view: EditItemView) -> () in
+                if name != ""{
+                    self.currentCategory?.subcategory[indexPath.row].name = name
+                }
+                view.removeFromSuperview()
+                self.tableView.reloadData()
+                self.navigationController?.navigationItem.rightBarButtonItem?.enabled = true
+            })
+
+            self.newItemView.addCancelHandler({ (view : EditItemView) -> () in
+                view.removeFromSuperview()
+                self.navigationController?.navigationItem.rightBarButtonItem?.enabled = true
+            })
+
+            self.newItemView.title.text = "Editar nome"
+
+            self.view.addSubview(self.newItemView)
         }
 
         rename.backgroundColor = UIColor.greenColor()
@@ -115,6 +118,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
     }
+
     // MARK:- Data Source delegate
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.currentCategory!.subcategory.count
@@ -144,9 +148,61 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK:- Buttons Action
     @IBAction func btnAddEntry(sender: AnyObject) {
         self.navigationController?.navigationItem.rightBarButtonItem?.enabled = false
-        self.view.addSubview(newCategoryView)
+        let actionsheet = UIAlertController(title: "O que vai adicionar?", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+
+        actionsheet.addAction(UIAlertAction(title: "Nova Pasta", style: UIAlertActionStyle.Default, handler: { (alert : UIAlertAction!) -> Void in
+
+            self.newItemView.addSaveHandler({ (name : String, view: EditItemView) -> () in
+                if name != ""{
+                    self.catman.addCategory(name, iconNamed: "")
+                }
+                view.removeFromSuperview()
+                self.tableView.reloadData()
+                self.navigationController?.navigationItem.rightBarButtonItem?.enabled = true
+            })
+
+            self.newItemView.addCancelHandler({ (view : EditItemView) -> () in
+                view.removeFromSuperview()
+                self.navigationController?.navigationItem.rightBarButtonItem?.enabled = true
+            })
+
+            self.newItemView.title.text = "Nova Categoria"
+
+            self.view.addSubview(self.newItemView)
+
+        }))
+
+        actionsheet.addAction(UIAlertAction(title: "Nova Galeria", style: UIAlertActionStyle.Default, handler: { (alert : UIAlertAction!) -> Void in
+
+            self.newItemView.addSaveHandler({ (name : String, view: EditItemView) -> () in
+                if name != ""{
+                    self.catman.addGallery(name, iconNamed: "")
+                }
+                view.removeFromSuperview()
+                self.tableView.reloadData()
+                self.navigationController?.navigationItem.rightBarButtonItem?.enabled = true
+            })
+
+            self.newItemView.addCancelHandler({ (view : EditItemView) -> () in
+                view.removeFromSuperview()
+                self.navigationController?.navigationItem.rightBarButtonItem?.enabled = true
+            })
+
+            self.newItemView.title.text = "Nova Galeria"
+
+            self.view.addSubview(self.newItemView)
+
+        }))
+
+        actionsheet.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Cancel, handler: { (alert) -> Void in
+            actionsheet.dismissViewControllerAnimated(true, completion: nil)
+        }))
+
+        self.presentViewController(actionsheet, animated: true, completion: nil)
     }
 
+
+    // MARK:- Navigation (Segue)
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let index = sender as! NSIndexPath
         if segue.identifier == "categorySegue"{
