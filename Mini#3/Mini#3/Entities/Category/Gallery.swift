@@ -10,7 +10,7 @@ import UIKit
 
 class Gallery : Item{
 
-    internal var imgData : Array<String> = []
+    internal var imgData : Array<UIImage> = []
 
 
     init(name: String, imageIcon : String){
@@ -22,14 +22,14 @@ class Gallery : Item{
         self.imageIcon = "galleryIcon"
     }
 
-    override func sort(){
-        dispatch_async(Int(QOS_CLASS_BACKGROUND.value), { () -> Void in
-            self.imgData.sort { $0 < $1 }
-        })
-    }
-
-    func addItem(item : String){
-        self.imgData.append(item)
-        self.imgData.sort { $0 < $1 }
-    }
+//    override func sort(){
+//        dispatch_async(Int(QOS_CLASS_BACKGROUND.value), { () -> Void in
+//            self.imgData.sort { $0 < $1 }
+//        })
+//    }
+//
+//    func addItem(item : String){
+//        self.imgData.append(item)
+//        self.imgData.sort { $0 < $1 }
+//    }
 }

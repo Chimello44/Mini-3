@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     private var newItemView : EditItemView!
     private var selectedIndex : NSIndexPath?
@@ -50,7 +50,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     // MARK:- Table View Delegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let selected = currentCategory?.subcategory[indexPath.row] as! Category
+        let selected : Item = currentCategory!.subcategory[indexPath.row]
 
         if selected.type == ItemType.Category{
             self.catman.selectCategory(indexPath.row)
@@ -59,7 +59,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
 
         else if selected.type == ItemType.Gallery{
-            performSegueWithIdentifier("gallerySegue", sender: indexPath)
+//            performSegueWithIdentifier("gallerySegue", sender: indexPath)
         }
     }
 
@@ -205,12 +205,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     // MARK:- Navigation (Segue)
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let index = sender as! NSIndexPath
         if segue.identifier == "categorySegue"{
             segue.perform()
         }
         else if segue.identifier == "gallerySegue"{
-            segue.perform()
+
+            let indexPath : NSIndexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)!
+            
+            GalleryManager.sharedInstance.currentGallery = self.currentCategory!.subcategory[indexPath.row] as? Gallery
+
         }
     }
 

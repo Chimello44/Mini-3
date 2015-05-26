@@ -305,6 +305,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ZD1-lu-k4S" kind="show" identifier="gallerySegue" id="MCV-Eo-Fx9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular" ambiguous="YES">
@@ -369,17 +372,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="lZO-Hz-t7f" id="tSI-cR-Knz"/>
-                        <segue destination="ZD1-lu-k4S" kind="show" identifier="gallerySegue" id="kIl-XA-RNS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3115.5" y="-183"/>
         </scene>
-        <!--View Controller-->
+        <!--Gallery-->
         <scene sceneID="rll-IF-oyn">
             <objects>
-                <viewController id="ZD1-lu-k4S" sceneMemberID="viewController">
+                <viewController id="ZD1-lu-k4S" customClass="GalleryViewController" customModule="Mini_3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TxO-jb-bnp"/>
                         <viewControllerLayoutGuide type="bottom" id="zBh-t4-gfK"/>
@@ -388,25 +390,150 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pOb-Ad-iZ3">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7mI-63-j6J">
-                                    <size key="itemSize" width="50" height="50"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="neV-Dj-8Os">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fcD-P1-dNB">
+                                    <size key="itemSize" width="80" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="iMD-6f-RDK" customClass="PhotoCell" customModule="Mini_3" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="usq-RH-09b">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    </variation>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <size key="customSize" width="80" height="80"/>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="usq-RH-09b"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="usq-RH-09b"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="img" destination="usq-RH-09b" id="hTd-nf-JJf"/>
+                                            <segue destination="dGq-Gw-1LZ" kind="show" identifier="viewLargePhoto" id="tSl-HI-nrg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="736"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZD1-lu-k4S" id="hLs-ZF-i9V"/>
+                                    <outlet property="delegate" destination="ZD1-lu-k4S" id="Kuv-R1-K3O"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="neV-Dj-8Os"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="neV-Dj-8Os"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" systemItem="organize" id="SwQ-nS-mB1">
+                            <connections>
+                                <action selector="btnLibrary:" destination="ZD1-lu-k4S" id="ZCj-Oy-etX"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Gallery" id="BAU-mk-i0c">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="rb7-PG-i1E">
+                            <connections>
+                                <action selector="btnCamera:" destination="ZD1-lu-k4S" id="vzu-xR-z6E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="neV-Dj-8Os" id="Myv-3q-daA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FIi-FF-QLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3885" y="-183"/>
+        </scene>
+        <!--Full-Size Photo-->
+        <scene sceneID="yVz-Q0-DAx">
+            <objects>
+                <viewController storyboardIdentifier="fullImageViewController" id="dGq-Gw-1LZ" customClass="ViewPhoto" customModule="Mini_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jJn-pk-p3X"/>
+                        <viewControllerLayoutGuide type="bottom" id="NUU-sM-mFK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Sh-wz-jW0">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ta5-Os-pMn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ta5-Os-pMn"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ta5-Os-pMn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="bookmarks" id="Caf-4b-0fm">
+                            <connections>
+                                <action selector="btnShare:" destination="dGq-Gw-1LZ" id="ma6-b7-ul4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="3Ts-Cu-mqd"/>
+                        <barButtonItem systemItem="trash" id="xhL-Cl-AJQ">
+                            <connections>
+                                <action selector="btnTrash:" destination="dGq-Gw-1LZ" id="736-Rm-SOH"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Full-Size Photo" id="HYc-26-Lj4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="RjV-6Q-Thf">
+                            <connections>
+                                <action selector="btnCancel:" destination="dGq-Gw-1LZ" id="r6h-6Z-hWz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imgView" destination="ta5-Os-pMn" id="xdh-bC-Buc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8f5-5T-iSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3885" y="558.75"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="Vca-1g-y1q">
