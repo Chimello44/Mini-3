@@ -34,7 +34,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 
         // New Item Setup
-        newItemView = NSBundle.mainBundle().loadNibNamed("NewItemView", owner: self, options: nil).first as! EditItemView
+        newItemView = NSBundle.mainBundle().loadNibNamed("EditItemView", owner: self, options: nil).first as! EditItemView
 
     }
 
@@ -74,6 +74,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.newItemView.addSaveHandler({ (name : String, view: EditItemView) -> () in
                 if name != ""{
                     self.currentCategory?.subcategory[indexPath.row].name = name
+                    self.currentCategory?.sort()
                 }
                 view.removeFromSuperview()
                 self.tableView.reloadData()
@@ -112,7 +113,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         delete.backgroundColor = UIColor.redColor()
 
-        return [rename,delete]
+        return [delete,rename]
     }
 
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {

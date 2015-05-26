@@ -16,7 +16,7 @@ class CategoryManager{
         self.currentUser = User()
         self.currentCategory = self.currentUser?.rootCategory
         self.favoriteCategory = self.currentUser?.favorite
-        self.currentUser?.rootCategory.sort()
+        self.currentUser?.rootCategory.fullSort()
     }
 
     var didChange : Bool = false

@@ -22,6 +22,17 @@ class Category : Item{
     }
 
     override func sort(){
+        self.subcategory.sort { (a: Item, b: Item) -> Bool in
+            if (a.name?.caseInsensitiveCompare(b.name!) == NSComparisonResult.OrderedAscending){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+    }
+
+    override func fullSort() {
         if subcategory.count > 0{
             dispatch_async(DispatchQueueType.Background, { () -> Void in
                 self.subcategory.sort { (a: Item, b: Item) -> Bool in

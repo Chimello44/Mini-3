@@ -31,4 +31,8 @@ class Item{
     func sort(){
         preconditionFailure("precisar ser implementado na classe filha!")
     }
+
+    func fullSort(){
+        preconditionFailure("precisar ser implementado na classe filha!")
+    }
 }
