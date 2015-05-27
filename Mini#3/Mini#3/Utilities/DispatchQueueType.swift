@@ -8,7 +8,11 @@
 
 import Foundation
 
+/**
+*  Classe que fornece as filas padrões do GDC
+*/
 struct DispatchQueueType {
+
     static var Default : Int {
         return Int(QOS_CLASS_DEFAULT.value)
     }

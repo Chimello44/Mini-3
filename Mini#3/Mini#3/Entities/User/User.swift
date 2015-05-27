@@ -8,10 +8,12 @@
 
 import Foundation
 
+/**
+*  Modelo do usuário
+*/
 class User {
 
     var username: String!
-//    var phoneNumber: String
     
     /**
     *  é a categoria raíz de cada um dos usuários (Pasta inicial)

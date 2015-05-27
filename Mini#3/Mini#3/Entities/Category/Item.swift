@@ -8,13 +8,25 @@
 
 import Foundation
 
+/**
+Enumerador contendo os tipos de item.
+
+- Category
+- Gallery
+*/
 enum ItemType{
     case Category, Gallery
 }
 
+/**
+*  Tipo genério da estrutura de dados
+*/
 class Item{
+    /// Nome do nó
     internal var name : String!
+    /// **Não Implementado**
     internal var imageIcon : String!
+    /// Tipo do nó
     internal var type : ItemType!
 
     init(name: String, imageIcon : String, type : ItemType){

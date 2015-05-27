@@ -8,19 +8,33 @@
 
 import UIKit
 
+/**
+*  Nó da arvore de pasta.
+*/
 class Category : Item{
-
+    // Nós filhos
     internal var subcategory : Array<Item> = []
 
+    /**
+    Construtor
+
+    :param: name      Nome da categoria/pasta
+    :param: imageIcon **não implementado**
+
+    */
     init(name: String, imageIcon : String){
         super.init(name: name, imageIcon: imageIcon, type: ItemType.Category)
     }
+
 
     required init(name: String, type : ItemType){
         super.init(name: name, type: ItemType.Category)
         self.imageIcon = "categoryIcon"
     }
 
+    /**
+    Ordena os nós filhos
+    */
     override func sort(){
         self.subcategory.sort { (a: Item, b: Item) -> Bool in
             if (a.name?.caseInsensitiveCompare(b.name!) == NSComparisonResult.OrderedAscending){
@@ -32,6 +46,10 @@ class Category : Item{
         }
     }
 
+
+    /**
+    Ordena o nó atual, e todos os seus filhos, de forma assíncrona
+    */
     override func fullSort() {
         if subcategory.count > 0{
             dispatch_async(DispatchQueueType.Background, { () -> Void in
@@ -45,15 +63,25 @@ class Category : Item{
                 }
             })
             for item in self.subcategory{
-                item.sort()
+                item.fullSort()
             }
         }
     }
 
+    /**
+    Remove um sub-nó
+
+    :param: index Índice do sub-nó a ser removido
+    */
     func removeChildAtIndex(index: Int){
         subcategory.removeAtIndex(index)
     }
 
+    /**
+    Adiciona um sub-nó
+
+    :param: item elemento do tipo **Item** a ser adicionado.
+    */
     func addItem(item : Item){
         if self.subcategory.count == 0{
             self.subcategory.append(item)
@@ -64,6 +92,14 @@ class Category : Item{
         }
     }
 
+    /**
+    Busca a posição que o nó deve ser adicionado de forma que mantenha a ordenação.
+
+    :param: item  item elemento do tipo **Item** a ser adicionado.
+    :param: range tupla de **Int** contendo a posição inical e final da busca.
+
+    :returns: **Int** contendo a posição que o elemento deve ser adicionado.
+    */
     func binarySearch(item : Item,  range : (start:Int, end:Int)) -> Int{
         if range.start >= range.end{
             return range.start

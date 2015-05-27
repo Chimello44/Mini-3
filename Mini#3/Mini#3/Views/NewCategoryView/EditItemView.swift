@@ -8,6 +8,11 @@
 
 import UIKit
 
+/**
+  View contendo a janela para inserir nome.
+
+  Nota: Tem que ser instanciado através da xib
+*/
 class EditItemView : UIView {
 
     @IBOutlet weak var txtField: UITextField!
@@ -17,8 +22,8 @@ class EditItemView : UIView {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
 
-    var saveHandler : ((String, EditItemView) -> ())?
-    var cancelHandler : ((EditItemView) -> ())?
+    private var saveHandler : ((String, EditItemView) -> ())?
+    private var cancelHandler : ((EditItemView) -> ())?
 
     override func awakeFromNib() {
         self.frame = UIScreen.mainScreen().bounds
@@ -27,15 +32,43 @@ class EditItemView : UIView {
     func setTxtFieldText(text : String){
         txtField.text = text
     }
+    /**
+    Adiciona um novo handler para o botão salvar.
 
+    Exemplo:
+
+        let obj : EditItemView
+
+        obj.addSaveHandler({(text:String, view:EditItemView)->() in
+            // Tratamento para salvar o texto
+            view.removeFromSuperview() // Fecha a janela
+        })
+
+    :param: handler **Closure** contendo a ação.
+    */
     func addSaveHandler(handler : (String, EditItemView) -> ()){
         self.saveHandler = { handler($0, $1) }
+        self.removeFromSuperview()
     }
 
+    /**
+    Adiciona um novo handler para o botão cancelar.
+
+    Exemplo:
+
+        let obj : EditItemView
+
+        obj.addSaveHandler({(text:String, view:EditItemView)->() in
+            view.removeFromSuperview() // Fecha a janela
+        })
+
+    :param: handler **Closure** contendo a ação.
+    */
     func addCancelHandler(handler : (EditItemView) -> ()){
         self.cancelHandler = { handler($0) }
     }
 
+    // MARK:- Ações dos botões
     @IBAction func btnSave(sender: AnyObject) {
         txtField.resignFirstResponder()
         if self.saveHandler != nil {

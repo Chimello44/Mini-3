@@ -58,17 +58,15 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.navigationController?.pushViewController(nextView, animated: true)
         }
 
-        else if selected.type == ItemType.Gallery{
-//            performSegueWithIdentifier("gallerySegue", sender: indexPath)
-        }
     }
 
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
 
-
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+
+        // Botão para renomear uma pasta/galeria
         let rename = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Renomear") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
 
             self.newItemView.addSaveHandler({ (name : String, view: EditItemView) -> () in
@@ -94,6 +92,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         rename.backgroundColor = UIColor.greenColor()
 
+        // Botão para deletar uma pasta/galeria
         let delete = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Deletar") { (action: UITableViewRowAction!, indexPath: NSIndexPath!) -> Void in
 
             let deleteAlert = UIAlertController(title: "Apagar?", message: "", preferredStyle: UIAlertControllerStyle.Alert)
