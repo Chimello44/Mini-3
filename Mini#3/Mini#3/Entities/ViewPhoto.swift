@@ -12,15 +12,13 @@ class ViewPhoto: UIViewController {
 
     var img: UIImage?
 
-    @IBOutlet weak var imgView: UIImageView!
 
+    @IBOutlet weak var imgView: UIImageView!
+    
     @IBAction func btnCancel(sender: AnyObject) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.navigationController?.popViewControllerAnimated(true)
     }
-    @IBAction func btnTrash(sender: AnyObject) {
-    }
-    @IBAction func btnShare(sender: AnyObject) {
-    }
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -18,7 +18,29 @@ class GalleryViewController : UIViewController , UICollectionViewDelegate , UICo
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    @IBAction func btnCamera(sender: AnyObject) {
+    @IBAction func btnGallery(sender: AnyObject) {
+        
+        self.navigationController?.navigationItem.rightBarButtonItem?.enabled = false
+        
+        let actionSheet = UIAlertController(title: "O que gostaria de fazer?", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        
+        actionSheet.addAction(UIAlertAction(title:"Tirar uma Foto", style:UIAlertActionStyle.Default, handler:{ action in
+            self.btnCamera()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title:"Escolher uma Foto", style:UIAlertActionStyle.Default, handler:{ action in
+            self.btnLibrary()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title:"Cancel", style:UIAlertActionStyle.Cancel, handler:nil))
+        presentViewController(actionSheet, animated:true, completion:nil)
+    }
+    
+    
+    
+    
+    func btnCamera(){
         if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
 
             var picker : UIImagePickerController = UIImagePickerController()
@@ -36,7 +58,7 @@ class GalleryViewController : UIViewController , UICollectionViewDelegate , UICo
 
         }
     }
-    @IBAction func btnLibrary(sender: AnyObject) {
+    func btnLibrary(){
         var picker : UIImagePickerController = UIImagePickerController()
         picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypesForSourceType(.PhotoLibrary)!
@@ -70,8 +92,7 @@ class GalleryViewController : UIViewController , UICollectionViewDelegate , UICo
         if segue.identifier == "viewLargePhoto"{
             let indexPath = self.collectionView.indexPathForCell(sender as! UICollectionViewCell)
             var detailVC = segue.destinationViewController as! ViewPhoto
-            detailVC.imgView.image = album[indexPath!.row]
-            
+            detailVC.img = album[indexPath!.row]
         }
     }
 
