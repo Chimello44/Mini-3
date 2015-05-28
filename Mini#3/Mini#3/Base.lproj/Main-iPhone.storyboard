@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="23y-YV-dCZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qVx-cD-dt9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -242,12 +242,65 @@
                         <outlet property="passwordTextField" destination="RPh-eJ-TTY" id="HGZ-Eg-Oso"/>
                         <outlet property="usernameTextField" destination="SLw-W4-5pV" id="RJX-aY-auY"/>
                         <outlet property="validationSubview" destination="fE5-21-fwN" id="WVw-ea-V78"/>
-                        <segue destination="dZJ-fX-gUX" kind="show" identifier="mainSegue" id="ht1-0b-dtb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBs-kj-Uil" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="738" y="-183"/>
+            <point key="canvasLocation" x="804" y="558.75"/>
+        </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="EH7-9u-UAR">
+            <objects>
+                <viewController id="qVx-cD-dt9" customClass="IntroViewController" customModule="Mini_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iYG-nP-1pp"/>
+                        <viewControllerLayoutGuide type="bottom" id="D1n-bB-6X1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Fc-OS-eMi">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="NotePic (logo?)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N88-3g-Bzn">
+                                <rect key="frame" x="238" y="176" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N88-3g-Bzn" firstAttribute="top" secondItem="iYG-nP-1pp" secondAttribute="bottom" constant="150" id="9p8-Rx-N4I"/>
+                            <constraint firstItem="N88-3g-Bzn" firstAttribute="leading" secondItem="1Fc-OS-eMi" secondAttribute="leadingMargin" id="mLt-ja-aDQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N88-3g-Bzn" secondAttribute="trailing" id="zdu-jl-BQF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="N88-3g-Bzn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9p8-Rx-N4I"/>
+                                <exclude reference="mLt-ja-aDQ"/>
+                                <exclude reference="zdu-jl-BQF"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="N88-3g-Bzn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9p8-Rx-N4I"/>
+                                <include reference="mLt-ja-aDQ"/>
+                                <include reference="zdu-jl-BQF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <segue destination="23y-YV-dCZ" kind="custom" identifier="LoginSegue" customClass="FadeSegue" customModule="Mini_3" customModuleProvider="target" id="dTN-Zh-Wu5"/>
+                        <segue destination="dZJ-fX-gUX" kind="show" identifier="MainSegue" id="ZC4-Fl-bir"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZY-c4-3ZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="-183"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="hNz-n2-bh7">
