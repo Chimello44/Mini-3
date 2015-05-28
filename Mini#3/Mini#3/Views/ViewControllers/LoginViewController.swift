@@ -25,6 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         forEachUITextFieldDoBlock { (textField) -> Void in
             textField.delegate = self;
         }
+        
     }
     
     @IBAction func toggleAccountCreation(sender: UIButton) {
