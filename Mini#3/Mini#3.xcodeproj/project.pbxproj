@@ -42,6 +42,10 @@
 		7EA2B4651B13935E0048C06D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B44E1B13935E0048C06D /* MainViewController.swift */; };
 		7EA2B4661B13935E0048C06D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B44F1B13935E0048C06D /* SettingsViewController.swift */; };
 		E888777F1B1781EE0015FDE6 /* customSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888777E1B1781EE0015FDE6 /* customSegue.swift */; };
+		E8D8B3D91B163ED000D138A1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E8D8B3D81B163ED000D138A1 /* Settings.bundle */; };
+		EB30C10C1B177D3700FDC1DB /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30C10B1B177D3700FDC1DB /* PersistenceManager.swift */; };
+		EB30C1101B1782E100FDC1DB /* FadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30C10F1B1782E100FDC1DB /* FadeSegue.swift */; };
+		EB30C1131B17856300FDC1DB /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB30C1121B17856300FDC1DB /* IntroViewController.swift */; };
 		EB516A441B13957D00F5FDE1 /* DispatchQueueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB516A431B13957D00F5FDE1 /* DispatchQueueType.swift */; };
 		EB516A4B1B14DFE700F5FDE1 /* GalleryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB516A4A1B14DFE700F5FDE1 /* GalleryManager.swift */; };
 		EB516A4E1B14E05600F5FDE1 /* ViewPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB516A4D1B14E05600F5FDE1 /* ViewPhoto.swift */; };
@@ -101,6 +105,9 @@
 		7EA2B44F1B13935E0048C06D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E888777E1B1781EE0015FDE6 /* customSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customSegue.swift; sourceTree = "<group>"; };
 		E8F514F41B162D0800D17818 /* Mini#3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mini#3-Bridging-Header.h"; sourceTree = "<group>"; };
+		EB30C10B1B177D3700FDC1DB /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		EB30C10F1B1782E100FDC1DB /* FadeSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FadeSegue.swift; path = Segue/FadeSegue.swift; sourceTree = "<group>"; };
+		EB30C1121B17856300FDC1DB /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		EB516A431B13957D00F5FDE1 /* DispatchQueueType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueType.swift; sourceTree = "<group>"; };
 		EB516A4A1B14DFE700F5FDE1 /* GalleryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryManager.swift; sourceTree = "<group>"; };
 		EB516A4D1B14E05600F5FDE1 /* ViewPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPhoto.swift; sourceTree = "<group>"; };
@@ -230,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				7EA2B4441B13935E0048C06D /* ParseCoreManager.swift */,
+				EB30C10B1B177D3700FDC1DB /* PersistenceManager.swift */,
 			);
 			path = Parse;
 			sourceTree = "<group>";
@@ -270,8 +278,17 @@
 				7EA2B44D1B13935E0048C06D /* LoginViewController.swift */,
 				7EA2B44E1B13935E0048C06D /* MainViewController.swift */,
 				7EA2B44F1B13935E0048C06D /* SettingsViewController.swift */,
+				EB30C1121B17856300FDC1DB /* IntroViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EB30C1111B1782E500FDC1DB /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				EB30C10F1B1782E100FDC1DB /* FadeSegue.swift */,
+			);
+			name = Segue;
 			sourceTree = "<group>";
 		};
 		EB516A4C1B14E02C00F5FDE1 /* Gallery */ = {
@@ -312,6 +329,7 @@
 				7EA2B43F1B13935E0048C06D /* Manager */,
 				7EA2B4421B13935E0048C06D /* Parse */,
 				7EA2B4451B13935E0048C06D /* Utilities */,
+				EB30C1111B1782E500FDC1DB /* Segue */,
 				7EA2B4471B13935E0048C06D /* Views */,
 				7EA2B41A1B13904F0048C06D /* Images.xcassets */,
 				EBB1D8421B05347900F8D8B1 /* AppDelegate.swift */,
@@ -458,6 +476,7 @@
 				7EA2B4601B13935E0048C06D /* Stack.swift in Sources */,
 				7EA2B4661B13935E0048C06D /* SettingsViewController.swift in Sources */,
 				EB516A501B14E09000F5FDE1 /* PhotoCell.swift in Sources */,
+				EB30C10C1B177D3700FDC1DB /* PersistenceManager.swift in Sources */,
 				7EA2B4571B13935E0048C06D /* MediaType.swift in Sources */,
 				EB516A441B13957D00F5FDE1 /* DispatchQueueType.swift in Sources */,
 				7EA2B4611B13935E0048C06D /* EditItemView.swift in Sources */,
@@ -465,6 +484,7 @@
 				EB516A4B1B14DFE700F5FDE1 /* GalleryManager.swift in Sources */,
 				7EA2B45A1B13935E0048C06D /* VoiceReq.swift in Sources */,
 				7EA2B45B1B13935E0048C06D /* Group.swift in Sources */,
+				EB30C1101B1782E100FDC1DB /* FadeSegue.swift in Sources */,
 				EB516A521B14E4B400F5FDE1 /* GalleryViewController.swift in Sources */,
 				7EA2B4551B13935E0048C06D /* Item.swift in Sources */,
 				E888777F1B1781EE0015FDE6 /* customSegue.swift in Sources */,
@@ -475,6 +495,7 @@
 				7EA2B4541B13935E0048C06D /* Gallery.swift in Sources */,
 				7EA2B4591B13935E0048C06D /* Video.swift in Sources */,
 				7EA2B4531B13935E0048C06D /* Category.swift in Sources */,
+				EB30C1131B17856300FDC1DB /* IntroViewController.swift in Sources */,
 				7EA2B45F1B13935E0048C06D /* ParseCoreManager.swift in Sources */,
 				7EA2B4561B13935E0048C06D /* Media.swift in Sources */,
 				7EA2B45E1B13935E0048C06D /* ConfigManager.swift in Sources */,
