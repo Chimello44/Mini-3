@@ -41,7 +41,7 @@
 		7EA2B4641B13935E0048C06D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B44D1B13935E0048C06D /* LoginViewController.swift */; };
 		7EA2B4651B13935E0048C06D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B44E1B13935E0048C06D /* MainViewController.swift */; };
 		7EA2B4661B13935E0048C06D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA2B44F1B13935E0048C06D /* SettingsViewController.swift */; };
-		E8D8B3D91B163ED000D138A1 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E8D8B3D81B163ED000D138A1 /* Settings.bundle */; };
+		E888777F1B1781EE0015FDE6 /* customSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888777E1B1781EE0015FDE6 /* customSegue.swift */; };
 		EB516A441B13957D00F5FDE1 /* DispatchQueueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB516A431B13957D00F5FDE1 /* DispatchQueueType.swift */; };
 		EB516A4B1B14DFE700F5FDE1 /* GalleryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB516A4A1B14DFE700F5FDE1 /* GalleryManager.swift */; };
 		EB516A4E1B14E05600F5FDE1 /* ViewPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB516A4D1B14E05600F5FDE1 /* ViewPhoto.swift */; };
@@ -99,7 +99,7 @@
 		7EA2B44D1B13935E0048C06D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7EA2B44E1B13935E0048C06D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7EA2B44F1B13935E0048C06D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		E8D8B3D81B163ED000D138A1 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E888777E1B1781EE0015FDE6 /* customSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customSegue.swift; sourceTree = "<group>"; };
 		E8F514F41B162D0800D17818 /* Mini#3-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mini#3-Bridging-Header.h"; sourceTree = "<group>"; };
 		EB516A431B13957D00F5FDE1 /* DispatchQueueType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueType.swift; sourceTree = "<group>"; };
 		EB516A4A1B14DFE700F5FDE1 /* GalleryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryManager.swift; sourceTree = "<group>"; };
@@ -280,6 +280,7 @@
 				EB516A4D1B14E05600F5FDE1 /* ViewPhoto.swift */,
 				EB516A4F1B14E09000F5FDE1 /* PhotoCell.swift */,
 				EB516A511B14E4B400F5FDE1 /* GalleryViewController.swift */,
+				E888777E1B1781EE0015FDE6 /* customSegue.swift */,
 			);
 			name = Gallery;
 			sourceTree = "<group>";
@@ -287,7 +288,6 @@
 		EBB1D8341B05347900F8D8B1 = {
 			isa = PBXGroup;
 			children = (
-				E8D8B3D81B163ED000D138A1 /* Settings.bundle */,
 				7EA2B4141B137E140048C06D /* Frameworks */,
 				EBB1D83F1B05347900F8D8B1 /* Mini#3 */,
 				EBB1D8571B05347900F8D8B1 /* Mini#3Tests */,
@@ -435,7 +435,6 @@
 				7EA2B4221B13904F0048C06D /* Images.xcassets in Resources */,
 				7EA2B4501B13935E0048C06D /* LaunchScreen.xib in Resources */,
 				7EA2B4621B13935E0048C06D /* EditItemView.xib in Resources */,
-				E8D8B3D91B163ED000D138A1 /* Settings.bundle in Resources */,
 				7EA2B4511B13935E0048C06D /* Main-iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +467,7 @@
 				7EA2B45B1B13935E0048C06D /* Group.swift in Sources */,
 				EB516A521B14E4B400F5FDE1 /* GalleryViewController.swift in Sources */,
 				7EA2B4551B13935E0048C06D /* Item.swift in Sources */,
+				E888777F1B1781EE0015FDE6 /* customSegue.swift in Sources */,
 				7EA2B45D1B13935E0048C06D /* CategoryManager.swift in Sources */,
 				EBB1D8431B05347900F8D8B1 /* AppDelegate.swift in Sources */,
 				EB516A541B15163200F5FDE1 /* NetworkChecker.swift in Sources */,
