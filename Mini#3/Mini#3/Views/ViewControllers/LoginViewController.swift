@@ -58,7 +58,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     if (error == nil) {
                         let userLoginAlertController = UIAlertController(title: "Success", message: "You logged in successfully", preferredStyle: .Alert);
                         userLoginAlertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) -> Void in
-                            self.performSegueWithIdentifier("mainSegue", sender: self);
+                            self.dismissViewControllerAnimated(false, completion: nil)
                         }));
                         self.showDetailViewController(userLoginAlertController, sender: self);
                     } else {
@@ -90,7 +90,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         if (error == nil) {
                             let accountCreationAlertController = UIAlertController(title: "Success", message: "Account created successfully", preferredStyle: .Alert);
                             accountCreationAlertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) -> Void in
-                                self.performSegueWithIdentifier("mainSegue", sender: self);
+                                self.dismissViewControllerAnimated(false, completion: nil)
                             }));
                             self.showViewController(accountCreationAlertController, sender: self);
                         } else {

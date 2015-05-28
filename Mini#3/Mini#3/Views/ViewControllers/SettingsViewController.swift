@@ -21,6 +21,9 @@ class SettingsViewController: UITableViewController{
     }
 
     @IBAction func logoutAction(sender: UIButton) {
+        PersistenceManager().logout { (error) -> Void in
+            
+        }
         dismissViewControllerAnimated(true, completion: { () -> Void in
             //Implementar logout do usuário.
         })
