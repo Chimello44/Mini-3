@@ -8,17 +8,16 @@
 
 import UIKit
 
-class Gallery : Item{
+class Gallery : Item {
 
     internal var imgData : Array<UIImage> = []
-
-
-    init(name: String, imageIcon : String){
-        super.init(name: name, imageIcon: imageIcon, type: ItemType.Gallery)
+    
+    init(name: String, imageIcon : String, objectId: String){
+        super.init(name: name, imageIcon: imageIcon, type: ItemType.Gallery, objectId: objectId)
     }
 
-    required init(name: String, type : ItemType){
-        super.init(name: name, type: ItemType.Gallery)
+    required init(name: String, type : ItemType, objectId: String){
+        super.init(name: name, type: ItemType.Gallery, objectId: objectId)
         self.imageIcon = "galleryIcon"
     }
 

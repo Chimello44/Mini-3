@@ -9,6 +9,9 @@
 import Foundation
 
 class IntroViewController : UIViewController {
+    
+    let pLocalManager = ParseLocalManager.sharedInstance;
+    
     override func viewDidLoad() {
 
     }
@@ -18,8 +21,7 @@ class IntroViewController : UIViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        let persistence = PersistenceManager()
-        if persistence.isLogged(){
+        if pLocalManager.isLogged(){
             performSegueWithIdentifier("MainSegue", sender: nil)
         }
         else{

@@ -11,32 +11,45 @@ import Foundation
 class CategoryManager{
     
     static let sharedInstance = CategoryManager()
+    
+    let pCoreManager = ParseCoreManager.sharedInstance;
+    let pLocalManager = ParseLocalManager.sharedInstance;
 
     private init(){
         // TODO: Resgatar os dados do parse
-        self.currentUser = User()
-        self.currentCategory = self.currentUser?.rootCategory
-        self.currentUser?.rootCategory.fullSort()
+        self.currentUser = pLocalManager.currentUser();
+        
+        //O método abaixo não é utilizado porque é assíncrono.
+        
+//        pCoreManager.getRootCategoryOf(currentUser, block: { (rootCategory, error) -> Void in
+//            if (rootCategory != nil) {
+//                self.currentCategory = rootCategory;
+//            } else {
+//                //Alertar o usuário que sua pasta principal não foi encontrada.
+//            }
+//        });
+        
+//        self.currentUser?.rootCategory.fullSort()
     }
 
     var didChange : Bool = false
     /// Referência do usuário ativo.
-    internal var currentUser : User?
+    internal var currentUser : User!
     /// Referência do nó da árvore que o usuário está interagindo
     internal var currentCategory : Category?
     /// TODO: Implementar sistema de favoritos
 //    internal var favoriteCategory : Category?
 
     private var categoryStack = Stack<Category>()
-
+    
     /**
     Adiciona uma nova pasta no nó atual.
 
     :param: name      **String** contendo o nome da pasta
     :param: iconNamed **Não implementado**
     */
-    func addCategory(name: String, iconNamed: String = ""){
-        let newcat = Category(name: name, imageIcon: iconNamed)
+    func addCategory(name: String, iconNamed: String = "", objectId: String){
+        let newcat = Category(name: name, imageIcon: iconNamed, objectId: objectId)
         self.currentCategory?.addItem(newcat)
     }
 
@@ -46,8 +59,8 @@ class CategoryManager{
     :param: name      **String** contendo o nome da galeria
     :param: iconNamed **Não Implementado**
     */
-    func addGallery(name: String, iconNamed: String = ""){
-        let newgal = Gallery(name: name, imageIcon: iconNamed)
+    func addGallery(name: String, iconNamed: String = "", objectId: String){
+        let newgal = Gallery(name: name, imageIcon: iconNamed, objectId: objectId)
         self.currentCategory?.addItem(newgal)
     }
 

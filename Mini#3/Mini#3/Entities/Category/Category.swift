@@ -11,10 +11,10 @@ import UIKit
 /**
 *  Nó da arvore de pasta.
 */
-class Category : Item{
+class Category : Item {
     // Nós filhos
     internal var subcategory : Array<Item> = []
-
+    
     /**
     Construtor
 
@@ -22,13 +22,13 @@ class Category : Item{
     :param: imageIcon **não implementado**
 
     */
-    init(name: String, imageIcon : String){
-        super.init(name: name, imageIcon: imageIcon, type: ItemType.Category)
+    init(name: String, imageIcon : String, objectId: String){
+        super.init(name: name, imageIcon: imageIcon, type: ItemType.Category, objectId: objectId)
     }
 
 
-    required init(name: String, type : ItemType){
-        super.init(name: name, type: ItemType.Category)
+    required init(name: String, type : ItemType, objectId: String){
+        super.init(name: name, type: ItemType.Category, objectId: objectId)
         self.imageIcon = "categoryIcon"
     }
 

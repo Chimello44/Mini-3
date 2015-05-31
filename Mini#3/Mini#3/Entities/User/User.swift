@@ -11,23 +11,28 @@ import Foundation
 /**
 *  Modelo do usuário
 */
-class User {
+class User: PFUser, PFSubclassing {
 
-    var username: String!
+    @NSManaged var name: String
     
     /**
     *  é a categoria raíz de cada um dos usuários (Pasta inicial)
     */
-    lazy var rootCategory : Category = {
-        return Category(name: "Principal",type: ItemType.Category)
-        }()
+    @NSManaged var rootCategory: ParseItem;
+//    lazy var rootCategory : Category = {
+//        return Category(name: "Principal",type: ItemType.Category)
+//        }()
     
     /**
     *  Categorias e/ou galerias marcadas como favoritos para um determinado usuário
     *  Este será exibido só na table inicial.
     */
-    lazy var favorite : Category = {
-        Category(name: "Principal",type: ItemType.Category)
-        }()
+//    lazy var favorite : Category = {
+//        Category(name: "Principal",type: ItemType.Category)
+//        }()
+    
+    override init() {
+        super.init();
+    }
     
 }

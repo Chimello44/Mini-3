@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="23y-YV-dCZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qVx-cD-dt9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -24,7 +24,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-W4-5pV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="usuário" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-W4-5pV">
                                 <rect key="frame" x="196" y="313" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="mwl-vT-Aes"/>
@@ -45,7 +45,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RPh-eJ-TTY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="senha" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RPh-eJ-TTY">
                                 <rect key="frame" x="196" y="360" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ehh-28-N9a"/>
@@ -66,7 +66,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qma-eN-GR5">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirmar senha" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qma-eN-GR5">
                                 <rect key="frame" x="196" y="456" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="U2n-8T-h5C"/>
@@ -92,9 +92,11 @@
                                 <rect key="frame" x="343" y="398" width="53" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.33936005460000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="15Z-Au-YMo"/>
+                                    <constraint firstAttribute="width" constant="60" id="15Z-Au-YMo">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="90"/>
+                                    </constraint>
                                 </constraints>
-                                <state key="normal" title="Sign up">
+                                <state key="normal" title="Nova conta">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -109,8 +111,7 @@
                                         <exclude reference="15Z-Au-YMo"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="100" y="435" width="53" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="15Z-Au-YMo"/>
                                     </mask>
@@ -123,9 +124,11 @@
                                 <rect key="frame" x="196" y="398" width="47" height="30"/>
                                 <color key="backgroundColor" red="0.173427303" green="0.76384943179999998" blue="0.1554359072" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="tEV-5Q-xZs"/>
+                                    <constraint firstAttribute="width" constant="60" id="tEV-5Q-xZs">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                    </constraint>
                                 </constraints>
-                                <state key="normal" title="Sign in">
+                                <state key="normal" title="Entrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -140,8 +143,7 @@
                                         <exclude reference="tEV-5Q-xZs"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="253" y="435" width="47" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="tEV-5Q-xZs"/>
                                     </mask>
@@ -154,9 +156,11 @@
                                 <rect key="frame" x="343" y="494" width="48" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.33936005460000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="XVM-3Z-bTf"/>
+                                    <constraint firstAttribute="width" constant="60" id="XVM-3Z-bTf">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                    </constraint>
                                 </constraints>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Cancelar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -185,9 +189,11 @@
                                 <rect key="frame" x="196" y="494" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.173427303" green="0.76384943179999998" blue="0.1554359072" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="AJW-q9-kYX"/>
+                                    <constraint firstAttribute="width" constant="60" id="AJW-q9-kYX">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                    </constraint>
                                 </constraints>
-                                <state key="normal" title="Create">
+                                <state key="normal" title="Criar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -216,9 +222,11 @@
                                 <rect key="frame" x="256" y="418" width="88" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="AW2-k2-gVa"/>
+                                    <constraint firstAttribute="width" constant="100" id="AW2-k2-gVa">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                    </constraint>
                                 </constraints>
-                                <state key="normal" title="Offline Mode">
+                                <state key="normal" title="Modo offline">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -233,8 +241,7 @@
                                         <exclude reference="AW2-k2-gVa"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="156" y="485" width="88" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="AW2-k2-gVa"/>
                                     </mask>

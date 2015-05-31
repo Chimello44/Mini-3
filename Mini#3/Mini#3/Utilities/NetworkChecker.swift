@@ -14,7 +14,7 @@ class NetworkChecker {
     class func isConnectedToNetwork() -> Bool {
         var status:Bool = false
 
-        let url = NSURL(string: "http://google.com")
+        let url = NSURL(string: "http://parse.com")
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "HEAD"
         request.cachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalAndRemoteCacheData

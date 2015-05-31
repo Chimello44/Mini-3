@@ -15,7 +15,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var confirmTextField: UITextField!
     @IBOutlet weak var validationSubview: UIView!
     
-    var pCoreManager = ParseCoreManager.sharedInstance;
+    let pCoreManager = ParseCoreManager.sharedInstance;
+    let pLocalManager = ParseLocalManager.sharedInstance;
+    let catman = CategoryManager.sharedInstance;
     
     //MARK: - Interface
     
@@ -48,7 +50,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //MARK: Login
     
     @IBAction func signInAction(sender: UIButton) {
-        let userLoginAlertController = UIAlertController(title: "Error", message: nil, preferredStyle: .Alert);
+//        let userLoginAlertController = UIAlertController(title: "Error", message: nil, preferredStyle: .Alert);
+        let userLoginAlertController = UIAlertController(title: "Erro", message: nil, preferredStyle: .Alert);
         userLoginAlertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil));
         
         if (validateInput(usernameTextField.text)) {
@@ -56,30 +59,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 pCoreManager.userLogin(usernameTextField.text, password: passwordTextField.text, errorHandler: { (error) -> Void in
                     if (error == nil) {
-                        let userLoginAlertController = UIAlertController(title: "Success", message: "You logged in successfully", preferredStyle: .Alert);
-                        userLoginAlertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) -> Void in
-                            self.dismissViewControllerAnimated(false, completion: nil)
-                        }));
-                        self.showDetailViewController(userLoginAlertController, sender: self);
+                        self.catman.currentUser = self.pLocalManager.currentUser();
+                        self.catman.currentCategory = nil;
+                        self.dismissViewControllerAnimated(false, completion: nil);
                     } else {
                         userLoginAlertController.message = error!.localizedDescription;
-                        self.showDetailViewController(userLoginAlertController, sender: self);
+                        self.presentViewController(userLoginAlertController, animated: true, completion: nil);
                     }
                 })
                 
             } else {
-                userLoginAlertController.message = "Your password must have between 4 and 30 alphanumerical characters";
-                showViewController(userLoginAlertController, sender: self);
+//                userLoginAlertController.message = "Your password must have between 4 and 30 alphanumerical characters";
+                userLoginAlertController.message = "Sua senha deve ter entre 4 a 30 caracteres alfanuméricos";
+                self.presentViewController(userLoginAlertController, animated: true, completion: nil);
             }
         } else {
-            userLoginAlertController.message = "Your username must have between 4 and 30 alphanumerical characters";
-            showViewController(userLoginAlertController, sender: self);
+//            userLoginAlertController.message = "Your username must have between 4 and 30 alphanumerical characters";
+            userLoginAlertController.message = "Sua conta deve ter entre 4 a 30 caracteres alfanuméricos";
+            self.presentViewController(userLoginAlertController, animated: true, completion: nil);
         }
         
     }
     
     @IBAction func createAction(sender: UIButton) {
-        let accountCreationAlertController = UIAlertController(title: "Error", message: nil, preferredStyle: .Alert);
+//        let accountCreationAlertController = UIAlertController(title: "Error", message: nil, preferredStyle: .Alert);
+        let accountCreationAlertController = UIAlertController(title: "Erro", message: nil, preferredStyle: .Alert);
         accountCreationAlertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil));
         
         if (validateInput(usernameTextField.text)) {
@@ -88,28 +92,32 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     pCoreManager.createUser(usernameTextField.text, password: passwordTextField.text, errorHandler: { (error) -> () in
                         if (error == nil) {
-                            let accountCreationAlertController = UIAlertController(title: "Success", message: "Account created successfully", preferredStyle: .Alert);
+//                            let accountCreationAlertController = UIAlertController(title: "Success", message: "Account created successfully", preferredStyle: .Alert);
+                            let accountCreationAlertController = UIAlertController(title: "Sucesso", message: "Conta criada com sucesso", preferredStyle: .Alert);
                             accountCreationAlertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) -> Void in
                                 self.dismissViewControllerAnimated(false, completion: nil)
                             }));
-                            self.showViewController(accountCreationAlertController, sender: self);
+                            self.presentViewController(accountCreationAlertController, animated: true, completion: nil);
                         } else {
                             accountCreationAlertController.message = error!.localizedDescription;
-                            self.showViewController(accountCreationAlertController, sender: self);
+                            self.presentViewController(accountCreationAlertController, animated: true, completion: nil);
                         }
                     });
                     
                 } else {
-                    accountCreationAlertController.message = "Your password does not match.";
-                    showViewController(accountCreationAlertController, sender: self);
+//                    accountCreationAlertController.message = "Your passwords do not match";
+                    accountCreationAlertController.message = "Sua senhas não são iguais";
+                    self.presentViewController(accountCreationAlertController, animated: true, completion: nil);
                 }
             } else {
-                accountCreationAlertController.message = "Your password must have between 4 and 30 alphanumerical characters";
-                showViewController(accountCreationAlertController, sender: self);
+//                accountCreationAlertController.message = "Your password must have between 4 and 30 alphanumerical characters";
+                accountCreationAlertController.message = "Sua senha deve ter entre 4 a 30 caracteres alfanuméricos";
+                self.presentViewController(accountCreationAlertController, animated: true, completion: nil);
             }
         } else {
-            accountCreationAlertController.message = "Your username must have between 4 and 30 alphanumerical characters";
-            showViewController(accountCreationAlertController, sender: self);
+//            accountCreationAlertController.message = "Your username must have between 4 and 30 alphanumerical characters";
+            accountCreationAlertController.message = "Sua conta deve ter entre 4 a 30 caracteres alfanuméricos";
+            self.presentViewController(accountCreationAlertController, animated: true, completion: nil);
         }
         
     }
@@ -131,7 +139,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         var error: NSError?
         var regex = NSRegularExpression(pattern: "[a-z0-9]{4,30}", options: .CaseInsensitive, error: &error);
         let matches = regex?.matchesInString(input, options: nil, range: NSMakeRange(0, count(input)));
-        
         return matches?.count > 0 ? true : false;
     }
     

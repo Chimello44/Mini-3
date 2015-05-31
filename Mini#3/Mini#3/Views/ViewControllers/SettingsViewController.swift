@@ -9,10 +9,13 @@
 import UIKit
 
 class SettingsViewController: UITableViewController{
+    
+    let pLocalManager = ParseLocalManager.sharedInstance;
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,12 +24,19 @@ class SettingsViewController: UITableViewController{
     }
 
     @IBAction func logoutAction(sender: UIButton) {
-        PersistenceManager().logout { (error) -> Void in
-            
+        pLocalManager.logout { (error) -> Void in
+            if (error == nil) {
+                let userLogoutAlertController = UIAlertController(title: "Sucesso", message: "Você se desconectou com sucesso", preferredStyle: .Alert);
+                userLogoutAlertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (UIAlertAction) -> Void in
+                    self.dismissViewControllerAnimated(true, completion: nil);
+                }));
+                self.presentViewController(userLogoutAlertController, animated: true, completion: nil);
+            } else {
+                let userLogoutAlertController = UIAlertController(title: "Erro", message: error?.localizedDescription, preferredStyle: .Alert);
+                userLogoutAlertController.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil));
+                self.presentViewController(userLogoutAlertController, animated: true, completion: nil);
+            }
         }
-        dismissViewControllerAnimated(true, completion: { () -> Void in
-            //Implementar logout do usuário.
-        })
     }
 
 }
